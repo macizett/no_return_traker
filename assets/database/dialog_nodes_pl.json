@@ -1,0 +1,5260 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "variant": [
+                {
+                    "text": "Wst\u0119p"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie jest to historia o z\u0142ocie, srebrze, religii czy polityce, ale o czym\u015b znacznie bardziej fascynuj\u0105cym - zapomnianym dziedzictwie innych, obcych cywilizacji...",
+                    "nextoption": 1
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 1,
+            "variant": [
+                {
+                    "text": "Prolog"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Skupiona na si\u0119ganiu wzrokiem w najdalsze zakamarki wszech\u015bwiata ludzko\u015b\u0107 zapomnia\u0142a o swoim najbli\u017cszym satelicie - ksi\u0119\u017cycu. Ostatecznie na jego ciemnej stronie odkryto prastar\u0105 baz\u0119 obcej, dawno zapomnianej cywilizacji wype\u0142nion\u0105 niezliczonymi statkami mi\u0119dzygwiezdnymi...\n\n",
+                    "nextoption": 2
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 2,
+            "variant": [
+                {
+                    "text": "Prolog"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pytanie \u201csk\u0105d pochodzimy?\u201d sta\u0142o si\u0119 bardzo aktualne ale jedyne co uda\u0142o si\u0119 ustali\u0107 to jak uruchomi\u0107 statki, kt\u00f3re odbywa\u0142y podr\u00f3\u017c w nieznanych kierunkach i nie zawsze wraca\u0142y...\n\nUtworzono specjalny korpus do kt\u00f3rego zg\u0142osi\u0107 mo\u017ce sie ka\u017cdy niezale\u017cnie od statusu spo\u0142ecznego i tworz\u0105c za\u0142og\u0119 z innymi \u015bmia\u0142kami wyruszy\u0107 w podr\u00f3\u017c \u201cBez powrotu\u201d...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 3,
+            "person": "Oficer Rekrutujący",
+            "variant": [
+                {
+                    "text": "Dzwoni Oficer rekrutuj\u0105cy"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz",
+                    "nextoption": 4
+                }
+            ],
+            "action": "show_officer_call_screen",
+            "act": 1
+        },
+        {
+            "id": 4,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Kolejny... Witamy w centrum rekrutacji! Jak si\u0119 do Ciebie zwraca\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pan...",
+                    "nextoption": 5
+                },
+                {
+                    "text": "Pani...",
+                    "nextoption": 5
+                }
+            ],
+            "action": "save_gender_choice",
+            "act": 1
+        },
+        {
+            "id": 5,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Masz poj\u0119cie na co si\u0119 w og\u00f3le piszesz? Ma\u0142o kto wraca."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mam swoje powody.",
+                    "nextoption": 6
+                },
+                {
+                    "text": "Nie Tw\u00f3j interes. R\u00f3b swoje!",
+                    "nextoption": 7
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 6,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "No dobrze. Przejd\u017cmy do procedury rekrutacyjnej... Kt\u00f3ra to Twoja misja?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "To b\u0119dzie moja pierwsza misja.",
+                    "nextoption": 8
+                },
+                {
+                    "text": "[Sk\u0142am] Chyba trzecia.",
+                    "nextoption": 9
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 7,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Masz racj\u0119. Ju\u017c wi\u0119cej nie zapytam. Przejd\u017amy do procedury rekrutacyjnej... Kt\u00f3ra to b\u0119dzie twoja misja?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "To b\u0119dzie moja pierwsza misja.",
+                    "nextoption": 8
+                },
+                {
+                    "text": "[Sk\u0142am] Chyba trzecia.",
+                    "nextoption": 9
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 8,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Ok. Czyli zaczynamy wszystko od pocz\u0105tku. Wolisz lot za\u0142ogowy czy pojedynczy?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Lubi\u0119 gra\u0107 w dru\u017cynie.",
+                    "nextoption": 10
+                },
+                {
+                    "text": "Jestem samotnym wilkiem.",
+                    "nextoption": 11
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 9,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Dziwne. Nie figurujesz w mojej bazie danych. Nie wa\u017cne, musimy zacz\u0105\u0107 od pocz\u0105tku. Wolisz lot za\u0142ogowy czy pojedynczy?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Lubi\u0119 gra\u0107 w dru\u017cynie.",
+                    "nextoption": 10
+                },
+                {
+                    "text": "Jestem samotnym wilkiem.",
+                    "nextoption": 11
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 10,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Znajdziemy Ci ciekaw\u0105 za\u0142og\u0119, a teraz powiedz, kt\u00f3ry statek preferujesz? Selenari to statki zdolne do przemieszczania si\u0119 mi\u0119dzy cia\u0142ami niebieskimi w uk\u0142adzie s\u0142onecznym. Manewruj\u0105 szybko i precyzyjnie na powierzchni ksi\u0119\u017cyc\u00f3w, planet, a tak\u017ce asteroid. maj\u0105 charakterystyczny, opalizuj\u0105cy b\u0142\u0119kitny design i s\u0105 wyposa\u017cone w zaawansowane systemy rozpoznawcze. Venturi natomiast s\u0105 olbrzymimi, kszta\u0142tem przypominaj\u0105cymi spadaj\u0105ce gwiazdy pojazdami. Maj\u0105 zdolno\u015b\u0107 do podr\u00f3\u017cowania mi\u0119dzygwiezdnego na niespotykan\u0105 skal\u0119. Ich niezwyk\u0142y nap\u0119d pozwala im na przenikanie przez odleg\u0142e obszary kosmosu w poszukiwaniu nieznanych cywilizacji. Energetyczne poszycia statk\u00f3w s\u0105 pokryte tajemniczymi, l\u015bni\u0105cymi wzorami."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Klasa Selenari.",
+                    "nextoption": 12
+                },
+                {
+                    "text": "Klasa Venturi.",
+                    "nextoption": 12
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 11,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Nie widz\u0119 przeszk\u00f3d. Kt\u00f3ry statek preferujesz? Selenari to statki zdolne do przemieszczania si\u0119 mi\u0119dzy cia\u0142ami niebieskimi w uk\u0142adzie s\u0142onecznym. Manewruj\u0105 szybko i precyzyjnie na powierzchni ksi\u0119\u017cyc\u00f3w, planet, a tak\u017ce asteroid. maj\u0105 charakterystyczny, opalizuj\u0105cy b\u0142\u0119kitny design i s\u0105 wyposa\u017cone w zaawansowane systemy rozpoznawcze. Venturi natomiast s\u0105 olbrzymimi, kszta\u0142tem przypominaj\u0105cymi spadaj\u0105ce gwiazdy pojazdami. Maj\u0105 zdolno\u015b\u0107 do podr\u00f3\u017cowania mi\u0119dzygwiezdnego na niespotykan\u0105 skal\u0119. Ich niezwyk\u0142y nap\u0119d pozwala im na przenikanie przez odleg\u0142e obszary kosmosu w poszukiwaniu nieznanych cywilizacji. Energetyczne poszycia statk\u00f3w s\u0105 pokryte tajemniczymi, l\u015bni\u0105cymi wzorami."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Klasa Selenari.",
+                    "nextoption": 12
+                },
+                {
+                    "text": "Klasa Venturi.",
+                    "nextoption": 12
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 12,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Wyb\u00f3r dobry jak ka\u017cdy inny. Przekonamy si\u0119 ile masz szcz\u0119\u015bcia ale zanim do tego dojdzie musisz wybra\u0107 rodzaj dodatkowego zaopatrzenia."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dodatkowy prowiant.",
+                    "nextoption": 13
+                },
+                {
+                    "text": "Bro\u0144 i dron zwiadowczy.",
+                    "nextoption": 13
+                }
+            ],
+            "action": "save_choice_venturi_or_selenari",
+            "act": 1
+        },
+        {
+            "id": 13,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Ostatnia kwestia na koniec. Czy mia\u0142e\u015b/a\u015b stwierdzone jakie\u015b zaburzenie, kt\u00f3re mog\u0105 by wp\u0142yn\u0105c na bezpiecze\u0144stwo misji?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie. Wszystko ze mn\u0105 dobrze.",
+                    "nextoption": 14
+                },
+                {
+                    "text": "Kiedy\u015b co\u015b si\u0119 sta\u0142o...",
+                    "nextoption": 14
+                }
+            ],
+            "action": "save_choice_drone_or_gear",
+            "act": 1
+        },
+        {
+            "id": 14,
+            "person": "Oficer rekrutuj\u0105cy",
+            "variant": [
+                {
+                    "text": "Zrobi\u0119 adnotacj\u0119. Mo\u017ce si\u0119 to okaza\u0107 bardzo pomocne podczas misji... Dobrze. Potwierd\u017a wys\u0142anie formularza i poddaj si\u0119 ewaluacji szanownej komisji."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wy\u015blij zg\u0142oszenie!",
+                    "nextoption": 15
+                },
+                {
+                    "text": "Zacznij od nowa.",
+                    "nextoption": 3
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 15,
+            "person": "Oficer rekrutujący",
+            "variant": [
+                {
+                    "text": "PRZETWARZANIE ZG\u0141OSZENIA REKRUTACYJNEGO"
+                },
+                {
+                    "text": "PROSZ\u0118 CZEKA\u0106"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oczekuj\u0119.",
+                    "nextoption": 16
+                }
+            ],
+            "action": "show_waiting_screen_recruitment",
+            "act": 1
+        },
+        {
+            "id": 16,
+            "person": "Oficer rekrutujący",
+            "variant": [
+                {
+                    "text": "Dzwoni oficer rekrutuj\u0105cy..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz",
+                    "nextoption": 17
+                }
+            ],
+            "action": "show_officer_call_screen",
+            "act": 1
+        },
+        {
+            "id": 17,
+            "person": "Oficer rekrutujący",
+            "variant": [
+                {
+                    "text": "Pragn\u0119 poinformowa\u0107, \u017ce Twoje zg\u0142oszenie zosta\u0142o rozpatrzone pozytywnie. Wszystkie Twoje zalecenia z rozmowy wst\u0119pnej zosta\u0142y przekazane do bazy na ksi\u0119\u017cycu. Termin startu misji: NIEZW\u0141OCZNY"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Startujemy!",
+                    "nextoption": 18
+                },
+                {
+                    "text": "Zacznij od nowa.",
+                    "nextoption": 3
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 18,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "TRANSFER DO BAZY OBCYCH W TOKU..."
+                },
+                {
+                    "text": "PROSZ\u0118 CZEKA\u0106"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oczekuj\u0119.",
+                    "nextoption": 19
+                }
+            ],
+            "action": "show_waiting_screen_starting",
+            "act": 2
+        },
+        {
+            "id": 19,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Oczekiwanie na rozpatrzenie"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz",
+                    "nextoption": 20
+                }
+            ],
+            "action": "show_control_center_call_screen",
+            "act": 2
+        },
+        {
+            "id": 20,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "...3...7...Halo?! Czy mnie s\u0142ycha\u0107? Odbi\u00f3r!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "G\u0142o\u015bno i wyra\u017anie",
+                    "nextoption": 21
+                },
+                {
+                    "text": "Mog\u0142oby by\u0107 lepiej",
+                    "nextoption": 21
+                }
+            ],
+            "action": "check_choice_venturi_or_selenari",
+            "act": 2
+        },
+        {
+            "id": 21,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed Tob\u0105 ostatnie procedury startowe. System wskazuje, \u017ce wybra\u0142e\u015b statek klasy Selenari. Potwierdzasz?"
+                },
+                {
+                    "text": "Przed Tob\u0105 ostatnie procedury startowe. System wskazuje, \u017ce wybra\u0142e\u015b statek klasy Venturi. Potwierdzasz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Tak, jak od linijki",
+                    "nextoption": 22
+                },
+                {
+                    "text": "Nie, chce co\u015b zmieni\u0107",
+                    "nextoption": 23
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 22,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Ile os\u00f3b liczy za\u0142oga?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Lec\u0119 tylko Ja",
+                    "nextoption": 24
+                },
+                {
+                    "text": "Nie wiem. Gdzie moi ludzie?",
+                    "nextoption": 25
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 23,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Niestety na tym etapie nie jest to mo\u017cliwe. Ile os\u00f3b liczy za\u0142oga?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Lec\u0119 tylko Ja",
+                    "nextoption": 24
+                },
+                {
+                    "text": "Nie wiem. Gdzie moi ludzie?",
+                    "nextoption": 25
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 24,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wszystko si\u0119 zgadza! Przygotuj si\u0119 do startu. W\u0142\u0105cz silniki i ustaw ci\u0105g minimalny."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ustaw ci\u0105g minimalny",
+                    "nextoption": 26
+                },
+                {
+                    "text": "Nie ma na co czeka\u0107. Ustaw maks!",
+                    "nextoption": 27
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 25,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nikt Ci nie powiedzia\u0142? Niestety ich prom uleg\u0142 awarii poszycia i sko\u0144czy\u0142o si\u0119 to ... \u017ale! Przygotuj si\u0119 do startu. W\u0142\u0105cz siliniki i ustaw ci\u0105g minimalny."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ustaw ci\u0105g minimalny",
+                    "nextoption": 26
+                },
+                {
+                    "text": "Nie ma na co czeka\u0107. Ustaw maks!",
+                    "nextoption": 27
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 26,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Potwierdzam ci\u0105g minimalny! Teraz sprawd\u017c systemy zasilania g\u0142\u00f3wnego i awaryjnego."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zasilanie dzia\u0142a poprawnie",
+                    "nextoption": 28
+                },
+                {
+                    "text": "Nie mam na to czasu. Co dalej?",
+                    "nextoption": 28
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 27,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jak chcesz. Pretensje b\u0119dziesz mie\u0107 do siebie. Potwierdzam ci\u0105g maksymalny! Teraz sprawd\u017c systemy zasilania g\u0142\u00f3wnego i awaryjnego"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zasilanie dzia\u0142a poprawnie",
+                    "nextoption": 28
+                },
+                {
+                    "text": "Nie mam na to czasu. Co dalej",
+                    "nextoption": 28
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 28,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wszystko przygotowane. Wci\u015bnij START kiedy b\u0119dziesz got\u00f3w"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wr\u00f3ć do procedury",
+                    "nextoption": 21
+                },
+                {
+                    "text": "STARTUJEMY!",
+                    "nextoption": 29
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 29,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Start statku za 3... 2... 1..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "GO! LEĆ!",
+                    "nextoption": 30
+                }
+            ],
+            "action": "check_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 30,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed Tob\u0105 nieokre\u015blona podr\u00f3\u017c. Mo\u017cesz uda\u0107 si\u0119 do komory hibernacyjnej - zostaniesz automatycznie wybudzony w wypadku jakiego\u015b zdarzenia lub pozwiedza\u0107 sw\u00f3j nowy dom."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Udaj si\u0119 do komory hibernacyjnej",
+                    "nextoption": 31
+                },
+                {
+                    "text": "Zwiedzaj statek",
+                    "nextoption": 32
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 31,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Hibernacja"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 32
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 2
+        },
+        {
+            "id": 32,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statek sk\u0142ada si\u0119 z trzech g\u0142\u00f3wnych cz\u0119\u015bci. Kt\u00f3r\u0105 chcesz zwiedzi\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Cz\u0142on dowodzenia",
+                    "nextoption": 33
+                },
+                {
+                    "text": "Magazyny zaopatrzenia",
+                    "nextoption": 34
+                },
+                {
+                    "text": "Cz\u0119\u015b\u0107 za\u0142ogowa i kantyna",
+                    "nextoption": 35
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 33,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "W tej cz\u0119\u015bci statku znajduj\u0105 si\u0119 instrumenty nawigacyjne i sterowanie statku. Niestety nie wiemy jak dzia\u0142a wi\u0119kszo\u015b\u0107 dost\u0119pnych urz\u0105dze\u0144..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zmie\u0144 pomieszczenie",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Udaj si\u0119 do komory hibernacyjnej",
+                    "nextoption": 31
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 34,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Tutaj jak widzisz znajduj\u0105 si\u0119 skrzynie z prowiantem, lekami, uzbrojeniem i wyposa\u017ceniem dodatkowym zam\u00f3wionym przez Ciebie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zmie\u0144 pomieszczenie",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Udaj si\u0119 do komory hibernacyjnej",
+                    "nextoption": 31
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 35,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Tutaj znajduje si\u0119 Twoja komora hibernacyjna oraz infrastruktura niezb\u0119dna do podtrzymania \u017cycia. Nic specjalnie interesuj\u0105cego..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zmie\u0144 pomieszczenie",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Kontynuuj eksploracj\u0119",
+                    "nextoption": 36
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 36,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Widzisz ten kryszta\u0142 przytwierdzony do sto\u0142u? Pierwszy raz taki widz\u0119. Chcesz go zbada\u0107 bli\u017cej?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zmie\u0144 pomieszczenie",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Sprawd\u017a kryszta\u0142!",
+                    "nextoption": 37
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 37,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Poczekaj, przeanalizujemy kryszta\u0142..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I jak?",
+                    "nextoption": 38
+                }
+            ],
+            "action": "show_waiting_screen_analysis",
+            "act": 2
+        },
+        {
+            "id": 38,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Kryszta\u0142 wykazuje struktur\u0119 fraktaln\u0105, kt\u00f3ra powtarza si\u0119 w r\u00f3\u017cnych wymiarach. To oznacza \u017ce ka\u017cdy element kryszta\u0142u posiada mniejsze kopie samego siebie w innych wymiarach przestrzeni.\r\n\r\nPOTENCJALNIE NIEBEZPIECZNY!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Udaj si\u0119 do komory hibernacyjnej",
+                    "nextoption": 31
+                },
+                {
+                    "text": "We\u017a kryszta\u0142",
+                    "nextoption": 39
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 39,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "ODRADZAM!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Udaj si\u0119 do komory hibernacyjnej",
+                    "nextoption": 31
+                },
+                {
+                    "text": "Mimo wszystko. We\u017a kryszta\u0142",
+                    "nextoption": 40
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 40,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Kryszta\u0142 w twoich r\u0119kach zaczyna drgać, po czym drganie ustaje. Zastanawiasz si\u0119 czy to w og\u00f3le si\u0119 wydarzy\u0142o..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kliknij aby kontynuować",
+                    "nextoption": 41
+                }
+            ],
+            "action": "info_screen_crystal_shaking",
+            "act": 2
+        },
+        {
+            "id": 41,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To ju\u017c? Niczego nie zarejestrowa\u0142em. Wygl\u0105da na to, \u017ce to tylko dziwna dekoracja albo urz\u0105dzenie, o kt\u00f3rym nic nie wiemy."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zabierz kryszta\u0142 ze sob\u0105",
+                    "nextoption": 42
+                },
+                {
+                    "text": "Od\u0142\u00f3\u017c na miejsce",
+                    "nextoption": 42
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 42,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Poczekaj. Co\u015b si\u0119 zmieni\u0142o..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co si\u0119 sta\u0142o?",
+                    "nextoption": 43
+                },
+                {
+                    "text": "Nie panikuj. Nic si\u0119 nie dzieje",
+                    "nextoption": 43
+                }
+            ],
+            "action": "show_darkness_screen",
+            "act": 2
+        },
+        {
+            "id": 43,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Halo?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Cholera! Nic nie widz\u0119!",
+                    "nextoption": 44
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 44,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "M\u00f3wi\u0142am, \u017ceby nie dotyka\u0107 kryszta\u0142u! Wszystko wskazuje na to, \u017ce kiedy dotkn\u0105\u0142\u0119\u015b/a\u015b kryszta\u0142u struktura fraktali w jego wnetrzu przemie\u015bci\u0142a si\u0119 - tak samo jak i my... Jeste\u015bmy w jednym z wym\u00edar\u00f3w tzw. niemo\u017cliwych, a ten dok\u0142adnie jest wszech\u015bwiatem bez kszta\u0142tu i formy..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Masz jaki\u015b pomys\u0142?",
+                    "nextoption": 45
+                },
+                {
+                    "text": "[Panika] Jak teraz wr\u00f3cimy?",
+                    "nextoption": 45
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 45,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jedyne co mo\u017cemy zrobi\u0107 to w jaki\u015b spos\u00f3b dosta\u0107 si\u0119 do kryszta\u0142u... Pami\u0119tasz jak do niego wr\u00f3ci\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Tak! Mam go kieszeni",
+                    "nextoption": 46
+                },
+                {
+                    "text": "Jest w kantynie. Musimy wr\u00f3ci\u0107",
+                    "nextoption": 46
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 46,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Rewelacyjnie! Postaraj si\u0119 odszuka\u0107..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Si\u0119gnij do kieszeni",
+                    "nextoption": 47
+                },
+                {
+                    "text": "Szukaj kryszta\u0142u w kantynie",
+                    "nextoption": 47
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 47,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jak ju\u017c Ci si\u0119 uda\u0142o. Zr\u00f3b to co wtedy i miejmy nadziej\u0119, \u017ce wr\u00f3cimy do normalno\u015bci..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Potrz\u0105\u015bnij kryszta\u0142em",
+                    "nextoption": 48
+                },
+                {
+                    "text": "Zniszcz kryszta\u0142",
+                    "nextoption": 49
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 48,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Kryszta\u0142 w twoich r\u0119kach zaczyna drgać po czym drganie ustaje. Zastanawiasz si\u0119 czy to w og\u00f3le si\u0119 wydarzy\u0142o..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kliknij aby kontunuować",
+                    "nextoption": 50
+                }
+            ],
+            "action": "info_screen_crystal_shaking",
+            "act": 2
+        },
+        {
+            "id": 49,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Kryszta\u0142 wybuch\u0142."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Boom!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_crystal_explosion",
+            "act": 2
+        },
+        {
+            "id": 50,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przenie\u015bli\u015bmy si\u0119. Pozw\u00f3l sprawdzi\u0107 gdzie..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Potrząśnij kryształem jeszcze raz.",
+                    "nextoption": 49
+                },
+                {
+                    "text": "Ok. Sprawd\u017a",
+                    "nextoption": 51
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 51,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wszystko wskazuje na to, \u017ce jeste\u015bmy zn\u00f3w na torach. Prosz\u0119, id\u017a ju\u017c do komory hibernacyinej, nie znios\u0119 wi\u0119cej wra\u017ce\u0144 tu\u017c po starcie..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Niech Ci b\u0119dzie",
+                    "nextoption": 52
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 52,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Hibernacja"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 53
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 2
+        },
+        {
+            "id": 53,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Odbieram sygna\u0142 z mg\u0142awicy molekularnej, kt\u00f3ra znajduje si\u0119 na naszej drodze. Zgodnie z dyrektyw\u0105 musimy sprawdzi\u0107 co to jest i sk\u0105d pochodzi... Jakie s\u0105 Twoje zalecenia?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zignoruj sygna\u0142. Wr\u00f3\u0107 do komory",
+                    "nextoption": 54
+                },
+                {
+                    "text": "Okre\u015bl dok\u0142adn\u0105 lokalizacj\u0119",
+                    "nextoption": 55
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 54,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Niestety nie moge tego zrobi\u0107. Za to mog\u0119 ustali\u0107 sk\u0105d pochodzi sygna\u0142. Wszystko wskazuje na to, \u017ce sygna\u0142 jest nadawany z g\u00f3rskiego \u0142a\u0144cucha na dryfuj\u0105cej w mg\u0142awicy molekularnej planety - taki \u017c\u0142obek dla gwiazd i planet. Do\u015b\u0107 niestabilne \u015brodowisko - mog\u0119 powiedzie\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co m\u00f3wi protok\u00f3\u0142?",
+                    "nextoption": 56
+                },
+                {
+                    "text": "Potrafisz rozszyfrowa\u0107 sygna\u0142?",
+                    "nextoption": 57
+                }
+            ],
+            "action": "show_ad",
+            "act": 2
+        },
+        {
+            "id": 55,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dok\u0142adnie to pr\u00f3buj\u0119 ustali\u0107. Wszystko wskazuje na to, \u017ce sygna\u0142 jest nadawany z g\u00f3rskiego \u0142a\u0144cucha na dryfuj\u0105cej w mg\u0142awicy molekularnej planety - taki \u017c\u0142obek dla gwiazd i planet. Do\u015b\u0107 niestabilne \u015brodowisko - mog\u0119 powiedzie\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co m\u00f3wi protok\u00f3\u0142?",
+                    "nextoption": 56
+                },
+                {
+                    "text": "Potrafisz rozszyfrowa\u0107 sygna\u0142?",
+                    "nextoption": 57
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 56,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Protok\u00f3\u0142 nakazuje rozszyfrowa\u0107 sygna\u0142 - o ile to wykonalne - i uda\u0107 si\u0119 zbada\u0107 obiekt."
+                }
+            ],
+            "options": [
+                {
+                    "text": "L\u0105dujemy!",
+                    "nextoption": 58
+                },
+                {
+                    "text": "Wy\u015blij drona zwiadowczego",
+                    "nextoption": 59
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 57,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Niestety nie potrafi\u0119 tego zrobi\u0107. Jest zbyt zniekszta\u0142cony... Protok\u00f3\u0142 nakazuje uda\u0107 si\u0119 na miejsce i zbada\u0107 \u017ar\u00f3d\u0142o sygna\u0142u."
+                }
+            ],
+            "options": [
+                {
+                    "text": "L\u0105dujemy!",
+                    "nextoption": 58
+                },
+                {
+                    "text": "Wy\u015blij drona zwiadowczego",
+                    "nextoption": 59
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 58,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wyl\u0105dowali\u015bmy! Znajdujemy si\u0119 nieopodal \u017ar\u00f3d\u0142a sygna\u0142u. Ubierz si\u0119 w skafander i opcjonalnie wyposa\u017c w bro\u0144 - o ile j\u0105 zabra\u0142e\u015b"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ubierz skafander",
+                    "nextoption": 61
+                },
+                {
+                    "text": "Ubierz skafander i we\u017a bro\u0144",
+                    "nextoption": 62
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 59,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie posiadasz drona zwiadowczego. Nie zabra\u0142e\u015b/a\u015b go w czasie odprawy. Wykonaj procedur\u0119 l\u0105dowania aby zej\u015b\u0107 na powierzchni\u0119"
+                },
+                {
+                    "text": "Dron zwiadowczy wys\u0142any. Wykry\u0142 nadajnik na jednym ze szczyt\u00f3w g\u00f3rskich. Mog\u0119 wyl\u0105dowa\u0107 najbli\u017cej jak to mo\u017cliwe - 2 km od \u017ar\u00f3d\u0142a - uwaga, czeka Ci\u0119 przeprawa po trudnym terenie.. Wykonaj procedur\u0119 l\u0105dowania aby zej\u015b\u0107 na powierzchni\u0119"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ubierz skafander",
+                    "nextoption": 61
+                },
+                {
+                    "text": "Ubierz skafander i we\u017a bro\u0144",
+                    "nextoption": 62
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 61,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jeste\u015b gotowy/a do wyj\u015bcia. Za chwil\u0119 \u015bluza si\u0119 otworzy i wyjdziesz na powierzchni\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wyjd\u017a ze statku",
+                    "nextoption": 67
+                },
+                {
+                    "text": "Mam jeszcze pytanie",
+                    "nextoption": 64
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 62,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Niestety nie zabra\u0142e\u015b ze sob\u0105 broni. Musisz improwizowa\u0107! Jeste\u015b gotowy/a do wyj\u015bcia. Za chwil\u0119 \u015bluza si\u0119 otworzy i wyjdziesz na powierzchni\u0119."
+                },
+                {
+                    "text": "Karabin w dlo\u0144! Jeste\u015b gotowy/a do wyj\u015bcia. Za chwil\u0119 \u015bluza si\u0119 otworzy i wyjdziesz na powierzchni\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wyjd\u017a ze statku",
+                    "nextoption": 66
+                },
+                {
+                    "text": "Mam jeszcze pytanie",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 63,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "\u015amia\u0142o! Pytaj."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Podaj informacje o planecie",
+                    "nextoption": 64
+                },
+                {
+                    "text": "Wiadomo co\u015b nowego o sygnale?",
+                    "nextoption": 65
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 64,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To niego\u015bcinna, skalista planeta, charakteryzujqca si\u0119 ekstremalnymi warunkami atmosterycznymi i trudnym terenem pe\u0142nym ostrych klifow i g\u0142\u0119bokich kanion\u00f3w. Gwa\u0142towne burze piaskowe, pot\u0119\u017cne wiatry si\u0119gaj\u0105ce pr\u0119dko\u015bci ponad 200 km/h, oraz ekstremalne wahania temperatur od ponad 50\u00b0C w dzie\u0144 do poni\u017cej -30\u00b0C w nocy, czyni\u0105 z niej \u015bmiertelnie niebezpieczne miejsce. Atmosfera bogata w dwutlenek siarki uniemo\u017cliwia oddychanie, a rzadka i truj\u0105ca woda oraz brak ro\u015blinno\u015bci sprawiaj\u0105, \u017ce \u017cycie jest praktycznie niemo\u017cliwe. Pomimo bogatych zasob\u00f3w mineralnych, brutalne warunki atmosteryczne i nieprzewidywalno\u015b\u0107 pogody sprawiaj\u0105, \u017ce planeta pozostaje w du\u017cej mierze niezbadana i niezdobyta."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wyjd\u017a ze statku",
+                    "nextoption": 66
+                },
+                {
+                    "text": "Zadaj inne pytanie",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 65,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie. Jak wspomina\u0142em, nie mog\u0119 z tego miejsca nic wi\u0119cej zrobi\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wyjd\u017a ze statku",
+                    "nextoption": 66
+                },
+                {
+                    "text": "Zadaj inne pytanie",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 66,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed Tob\u0105 jakie\u015b 2 km w ci\u0119\u017ckim terenie z nieprzewidywaln\u0105 pogod\u0105. Teraz skup si\u0119 i ruszaj na p\u00f3\u0142noc... Zaraz! Odbieram kolejn\u0105 transmis\u0119 - tym razem nie zak\u0142\u00f3con\u0105!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz transmisj\u0119",
+                    "nextoption": 68
+                },
+                {
+                    "text": "Nie odbieraj",
+                    "nextoption": 67
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 67,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Niestety nie za bardzo masz wyj\u015bcie. Przypominam o dyrektywach agencji! Odbieram!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz transmisj\u0119",
+                    "nextoption": 68
+                },
+                {
+                    "text": "Nie odbieraj!",
+                    "nextoption": 67
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 68,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Dzwoni Rozbitek..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Odbierz",
+                    "nextoption": 69
+                }
+            ],
+            "action": "show_survivor_call_screen",
+            "act": 2
+        },
+        {
+            "id": 69,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Halo... S\u0142ycha\u0107 mnie?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kim jeste\u015b?",
+                    "nextoption": 70
+                },
+                {
+                    "text": "G\u0142o\u015bno i wyra\u017anie",
+                    "nextoption": 70
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 70,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Hmm... Gdzie moje maniery... Nazywam si\u0119 profesor Milo."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Gdzie si\u0119 dok\u0142adnie znajdujesz?",
+                    "nextoption": 71
+                },
+                {
+                    "text": "Jak si\u0119 znalaz\u0142e\u015b na tej planecie?",
+                    "nextoption": 71
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 71,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "\u017bebym to ja wiedzia\u0142. Nie znam nawet nazwy tej planety. Wyl\u0105dowali\u015bmy tutaj zwiedzeni sygna\u0142em, a raczej zostali\u015bmy do tego zmuszeni..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co\u015b mi to m\u00f3wi...",
+                    "nextoption": 72
+                },
+                {
+                    "text": "Co by\u0142o dalej?",
+                    "nextoption": 73
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 72,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Wiesz o czym m\u00f3wi\u0119. Dalej to ju\u017c klasycznie... Wyl\u0105dowali\u015bmy w \u015brodku piaskowej burzy. Nie mieli\u015bmy poj\u0119cia, \u017ce piasek jest tutaj niczym woda. Statek na zawsze spocz\u0105\u0142 pod piaskami, a za\u0142oga ... za\u0142oga znikn\u0119\u0142a wraz z nim ... prze\u017cy\u0142em tylko ja..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Brzmi racjonalnie",
+                    "nextoption": 74
+                },
+                {
+                    "text": "Co\u015b \u015bciemniasz",
+                    "nextoption": 75
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 73,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Dalej to ju\u017c klasycznie... Wyl\u0105dowali\u015bmy w \u015brodku piaskowej burzy. Nie mieli\u015bmy poj\u0119cia, \u017ce piasek jest tutaj niczym woda. Statek na zawsze spocz\u0105\u0142 pod piaskami, a za\u0142oga ... za\u0142oga znikn\u0119\u0142a wraz z nim ... prze\u017cy\u0142em tylko ja..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Brzmi racjonalnie",
+                    "nextoption": 74
+                },
+                {
+                    "text": "Co\u015b \u015bciemniasz",
+                    "nextoption": 75
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 74,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Bo takie jest. Sam widzia\u0142e\u015b/a\u015b warunki na tej planecie. Mo\u017cesz mi jako\u015b pom\u00f3c?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Najpierw musz\u0119 zbada\u0107 sygna\u0142",
+                    "nextoption": 76
+                },
+                {
+                    "text": "Wiesz co\u015b o sygnale?",
+                    "nextoption": 76
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 75,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Sam widzia\u0142e\u015b/a\u015b warunki na tej planecie. My\u015blisz, \u017ce m\u00f3g\u0142bym to wymy\u015bli\u0107? Lepiej pomy\u015bl jak mi pom\u00f3c?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Najpierw musz\u0119 zbada\u0107 sygna\u0142",
+                    "nextoption": 76
+                },
+                {
+                    "text": "Wiesz co\u015b o sygnale?",
+                    "nextoption": 76
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 76,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Nie wiem na co jeszcze czekasz. Ruszaj!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ruszaj na p\u00f3\u0142noc",
+                    "nextoption": 78
+                },
+                {
+                    "text": "Ruszaj na po\u0142udnie",
+                    "nextoption": 77
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 77,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Spadłeś z urwiska"
+                }
+            ],
+            "options": [
+                {
+                    "text": "RIP",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_cliff_fall",
+            "act": 2
+        },
+        {
+            "id": 78,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dobrze, \u017ce pami\u0119ta\u0142e\u015b co m\u00f3wi\u0142em. Poszed\u0142by\u015b na po\u0142udnie i spad\u0142by\u015b w przepa\u015b\u0107... Przed Tob\u0105 kolejny wyb\u00f3r. Mo\u017cesz uda\u0107 si\u0119 prze\u0142\u0119cz\u0105 ale b\u0119dziesz nara\u017cony na szalone warunki pogodowe, albo wybra\u0107 drog\u0119 przez system jaski\u0144 - z tym, \u017ce nie mam poj\u0119cia co tam jest... Co zdecydujesz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wybieram \u015bcie\u017ck\u0119 prze\u0142\u0119cz\u0105",
+                    "nextoption": 79
+                },
+                {
+                    "text": "Jaskinie. Pogoda jest ... szalona",
+                    "nextoption": 89
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 79,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed Tob\u0105 spokojny spacerek o dlugo\u015bci 1000 m do nastepnego podej\u015bcia. Nie \u015bpiesz si\u0119, pogoda jest stabilna, a pod\u0142o\u017ce przypomina wielk\u0105 tark\u0119 ostrych kamieni wi\u0119c uwa\u017caj na ka\u017cdy krok..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 80
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 80,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Nie chce si\u0119 wtr\u0105ca\u0107 ale mam nadziej\u0119, \u017ce zabra\u0142e\u015b dodatkowy prowiant... Marz\u0119 o zimnym piwku."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie martw si\u0119. Wszystko jest!",
+                    "nextoption": 81
+                },
+                {
+                    "text": "Najpierw musimy Cię znaleźć.",
+                    "nextoption": 82
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 81,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Uspokoi\u0142e\u015b/a\u015b mnie ale zanim do tego dojdzie i usiqdziemy przy zimnym piwku b\u0119dziemy musieli wymy\u015ble\u0107 jak mnie znale\u015b\u0107"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mam pewien pomys\u0142",
+                    "nextoption": 83
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 84
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 82,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Zmieniasz temat. Rozumiem, Czyli m\u00f3j ratunek nie jest jeszcze taki pewny. Najpierw skupmy si\u0119 jak mnie znale\u015b\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mam pewien pomys\u0142",
+                    "nextoption": 83
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 84
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 83,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Z nas dw\u00f3ch to ja jestem profesorem i nic nie wymy\u015bli\u0142em. Ciekawe na co Ty wpadniesz..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zobaczysz",
+                    "nextoption": 85
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 85
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 84,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "A powiniene\u015b/a\u015b. Z nas dw\u00f3ch to ja jestem profesorem i nic nie wymy\u015bli\u0142em. Ciekawe na co Ty wpadniesz..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zobaczysz",
+                    "nextoption": 85
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 85
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 85,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Widz\u0119 \u017ce nie masz ochoty na rozmowy. Odezw\u0119 si\u0119 p\u00f3\u017aniej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 86
+                }
+            ],
+            "action": "show_ad",
+            "act": 2
+        },
+        {
+            "id": 86,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zdecydowanie! Dotar\u0142e\u015b/a\u015b do wzniesienia. Teraz si\u0119 skup"
+                }
+            ],
+            "options": [
+                {
+                    "text": "U\u017cyj czekan\u00f3w do wspinaczki",
+                    "nextoption": 87
+                },
+                {
+                    "text": "Wspinaj si\u0119 klasycznie",
+                    "nextoption": 88
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 87,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wspinaczka w toku"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ostrożnie",
+                    "nextoption": 99
+                }
+            ],
+            "action": "show_waiting_screen_climbing",
+            "act": 2
+        },
+        {
+            "id": 88,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Spadasz w otchłań"
+                }
+            ],
+            "options": [
+                {
+                    "text": "O nieee",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_void_fall",
+            "act": 2
+        },
+        {
+            "id": 89,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Idziemy jaskiniami. W takim razie ruszaj i zobaczymy co nas tam czeka..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 90
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 90,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Nie chce si\u0119 wtr\u0105ca\u0107 ale mam nadziej\u0119, \u017ce zabra\u0142e\u015b dodatkowy prowiant... Marz\u0119 o zimnym piwku."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie martw si\u0119. Wszystko jest!",
+                    "nextoption": 91
+                },
+                {
+                    "text": "Najpierw musimy Ci\u0119s znale\u015b\u0107",
+                    "nextoption": 92
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 91,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Uspokoi\u0142e\u015b/a\u015b mnie ale zanim do tego dojdzie i usi\u0105dziemy przy zimnym piwku b\u0119dziemy musieli wymy\u015ble\u0107 jak mnie znale\u015b\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mam pewien pomys\u0142",
+                    "nextoption": 93
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 94
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 92,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Zmieniasz temat. Rozumiem. Czyli m\u00f3j ratunek nie jest jeszcze taki pewny. Najpierw skupmy si\u0119 jak mnie znale\u015b\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mam pewien pomys\u0142",
+                    "nextoption": 93
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 94
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 93,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Z nas dw\u00f3ch to ja jestem profesorem i nic nie wymy\u015bli\u0142em. Ciekawe na co Ty wpadniesz..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zobaczysz",
+                    "nextoption": 95
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 95
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 94,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "A powiniene\u015b. Z nas dw\u00f3ch to ja jestem profesorem i nic nie wymy\u015bli\u0142em. Ciekawe na co tu wpadniesz..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zobaczysz",
+                    "nextoption": 95
+                },
+                {
+                    "text": "Na razie o tym nie my\u015bl\u0119",
+                    "nextoption": 95
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 95,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Widz\u0119, \u017ce nie masz ochoty na rozmowy. Odezw\u0119 si\u0119 p\u00f3\u017aniej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 96
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 96,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed tob\u0105 studnia. Musisz jako\u015b j\u0105 pokona\u0107 ..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Spr\u00f3buj przeskoczy\u0107",
+                    "nextoption": 97
+                },
+                {
+                    "text": "U\u017cyj liny",
+                    "nextoption": 98
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 97,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Spadasz w otchłań"
+                }
+            ],
+            "options": [
+                {
+                    "text": "O nieee",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_void_fall",
+            "act": 2
+        },
+        {
+            "id": 98,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przeprawa w toku"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie spadnij!",
+                    "nextoption": 99
+                }
+            ],
+            "action": "show_waiting_screen_crossing",
+            "act": 2
+        },
+        {
+            "id": 99,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dotar\u0141e\u015b/a\u015b na szczyt kanionu. Ju\u017c niedaleko do \u017ar\u00f3d\u0142a sygna\u0142u... Pami\u0119taj, jeste\u015b tam sam/a, bez wsparcia - ka\u017cdy tw\u00f3j krok mo\u017ce przynie\u015b\u0107 odkrycia... albo zagro\u017cenia..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wiem. Dzi\u0119ki.",
+                    "nextoption": 100
+                },
+                {
+                    "text": "Niebezpiecze\u0144stwo?",
+                    "nextoption": 100
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 100,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jeste\u015b samotnym odkrywc\u0105 w tej niezbadanej przestrzeni. Ludzka psychika nie jest stworzona do takiego odosobnienia. Czy izolacja zaczyna ci\u0119 ju\u017c dotyka\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Intryguje mnie",
+                    "nextoption": 101
+                },
+                {
+                    "text": "Przyt\u0142acza mnie",
+                    "nextoption": 101
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 101,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wszystkie procedury s\u0105 jednoznaczne... ale mog\u0119 to zg\u0142osi\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zg\u0142o\u015b",
+                    "nextoption": 102
+                },
+                {
+                    "text": "Zachowaj dla siebie",
+                    "nextoption": 102
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 102,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Na dalekiej planecie, z dala od codziennych zmartwie\u0144, mo\u017ce czasem wydawa\u0107 si\u0119, \u017ce mo\u017cemy uwolni\u0107 si\u0119 od naszych sekret\u00f3w. Mo\u017ce chcesz si\u0119 czym\u015b podzieli\u0107? Cz\u0119sto, ludzie w ekstremalnych sytuacjach odkrywaj\u0105 nowe prawdy o sobie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "To moja sprawa",
+                    "nextoption": 103
+                },
+                {
+                    "text": "Nie teraz",
+                    "nextoption": 103
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 103,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przesz\u0142o\u015b\u0107 cz\u0119sto rzuca d\u0142ugi cie\u0144 na tera\u017aniejszo\u015b\u0107, a decyzje, kt\u00f3re podj\u0119lismy kiedy\u015b, mog\u0105 kszta\u0142towa\u0107 nasze teraz. Uwa\u017casz, \u017ce s\u0105 sekrety, kt\u00f3re mog\u0105 by\u0107 tak przera\u017caj\u0105ce lub destrukcyjne, \u017ce lepiej by by\u0142o ich nigdy nie odkrywa\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Niekt\u00f3re lepiej zostawi\u0107",
+                    "nextoption": 104
+                },
+                {
+                    "text": "Niekt\u00f3re wyjd\u0105",
+                    "nextoption": 104
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 104,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Misje takie jak twoja to nie tylko kwestia bada\u0144 i eksploracji. Czasem wydaje mi si\u0119, \u017ce jest co\u015b wi\u0119cej, co przyci\u0105ga nas do gwiazd. Co Ciebie przyciqga do gwiazd?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Rozkazy",
+                    "nextoption": 105
+                },
+                {
+                    "text": "Nowe horyzonty",
+                    "nextoption": 105
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 105,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie mo\u017cemy ignorowa\u0107 indywidualnych d\u0105\u017ce\u0144, kt\u00f3re sprawiaj\u0105, \u017ce zostajesz wybrany do tak wyj\u0105tkowych zada\u0144. Mo\u017cliwe, \u017ce gdzie\u015b w g\u0142ebi siebie szukasz odpowiedzi, kt\u00f3rej na Ziemi nie znajdziesz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Powody osobiste",
+                    "nextoption": 106
+                },
+                {
+                    "text": "Nauka i eksploracja",
+                    "nextoption": 106
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 106,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wyobra\u017cenie o eksploracji kosmicznej cz\u0119sto bywa snem o ucieczce. Mo\u017cemy pr\u00f3bowa\u0107 uciec od naszych problem\u00f3w na Ziemi, szukaj\u0105c rozwi\u0105zania w gwiazdach. Czy by\u0142a to ucieczka tak\u017ce dla ciebie, czy mo\u017ce co\u015b wi\u0119cej?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "By\u0107 mo\u017ce",
+                    "nextoption": 107
+                },
+                {
+                    "text": "Nie wiem",
+                    "nextoption": 107
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 107,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Rozumiem, \u017ce pewne kwestie pozostan\u0105 nieodkryte, ale czy pami\u0119tasz moment, kiedy zdecydowa\u0142e\u015b si\u0119 na t\u0119 podr\u00f3\u017c? Co by\u0142o tym impulsuj\u0105cym momentem?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pragnienie zmian",
+                    "nextoption": 108
+                },
+                {
+                    "text": "Nie przypominam sobie",
+                    "nextoption": 108
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 108,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Interesuj\u0105ce... Ale m\u00f3wi\u0105c o zmianach, wykrywamy gwa\u0142towne zmiany barometryczne blisko twojej lokalizacji. Czy dostrzegasz jakie\u015b oznaki nadchodz\u0105cej burzy?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wydaje mi si\u0119, \u017ce czuj\u0119 wiatr",
+                    "nextoption": 109
+                },
+                {
+                    "text": "Wszystko wygl\u0105da spokojnie",
+                    "nextoption": 109
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 109,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie pozw\u00f3l si\u0119 zmyli\u0107 ciszy przed burz\u0105. Nasze instrumenty wskazuj\u0105 na szybko zbli\u017caj\u0105c\u0105 si\u0119 megaburz\u0119 piaskow\u0105. Musisz natychmiast znale\u017a\u0107 schronienie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Poszukam schronienia",
+                    "nextoption": 111
+                },
+                {
+                    "text": "Id\u0119 dalej",
+                    "nextoption": 110
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 110,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Spadasz z urwiska"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Trzymaj się",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_cliff_fall",
+            "act": 2
+        },
+        {
+            "id": 111,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Schronienie jest blisko, widz\u0119 ma\u0142\u0105 grot\u0119 skaln\u0105 niedaleko. Musisz znale\u017a\u0107 schronienie natychmiast."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Chowam si\u0119 w grocie",
+                    "nextoption": 113
+                },
+                {
+                    "text": "Id\u0119 dalej",
+                    "nextoption": 112
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 112,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Giniesz w burzy"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nieee",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 113,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Pogodowe okno czasowe jest bardzo ma\u0142e. Musisz zdecydowa\u0107, czy ruszy\u0107 w stron\u0119 sygna\u0142u, czy ratowa\u0107 rozbitka. Moje zdanie ju\u017c znasz."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ratujemy cz\u0142owieka",
+                    "nextoption": 114
+                },
+                {
+                    "text": "Badamy sygna\u0142",
+                    "nextoption": 122
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 114,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Protok\u00f3\u0142 zaleca zbadanie sygna\u0142u. Wola\u0142bym nie zg\u0142asza\u0107 niesubordynacji ale sam zadecydujesz."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 115
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 115,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Ju\u017c si\u0119 nie mog\u0119 doczeka\u0107. Mam do\u015b\u0107 tej przekl\u0119tej planety!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ju\u017c dobrze. Ruszamy do sygna\u0142u",
+                    "nextoption": 116
+                },
+                {
+                    "text": "Ruszamy po rozbitka",
+                    "nextoption": 122
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 116,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zg\u0142aszam naruszenie protoko\u0142u! Je\u017celi chcesz uratowa\u0107 cz\u0142owieka ruszaj na zach\u00f3d. Sygna\u0142 jest coraz bardziej wyra\u017any."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 117
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 117,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Jeste\u015b moim anio\u0142em str\u00f3\u017cem. Dzi\u0119kuj\u0119"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dobrze b\u0119dzie mie\u0107 towarzystwo",
+                    "nextoption": 118
+                },
+                {
+                    "text": "Nie masz w\u0105tpliwo\u015bci",
+                    "nextoption": 118
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 118,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Towarzystwo mo\u017ce by\u0107 wskazane dla Twojego zdrowia psychicznego ale na pewno nie dla zapas\u00f3w, kt\u00f3re mog\u0105 szybko si\u0119 sko\u0144czy\u0107.\r\n\r\nJeste\u015b na miejscu. Przed tob\u0105 \u017ar\u00f3d\u0142o sygna\u0142u naszego rozbitka."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Uciekaj na statek",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Wejd\u017a do budynku",
+                    "nextoption": 119
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 119,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Na reszcie jeste\u015b! Nawet nie wiesz jak si\u0119 ciesz\u0119. Wracamy do domu?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Tak. idziemy wracamy na statek",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Chcesz co\u015b zabra\u0107?",
+                    "nextoption": 120
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 120,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Tak. Wyobra\u017a sobie \u017ce znalaz\u0142em pewien kryszta\u0142. Nie wiem do czego s\u0142u\u017cy ale b\u0119dzie sporo wart ja wr\u00f3cimy na ziemi\u0119"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ukradnij kryszta\u0142 i uciekaj",
+                    "nextoption": 121
+                },
+                {
+                    "text": "Wr\u00f3\u0107cie razem na statek",
+                    "nextoption": 137
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 121,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Poczekaj a\u017c b\u0119dzie ubiera\u0142 skafander po czym uciekaj."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Uciekaj",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Poczekaj",
+                    "nextoption": 137
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 122,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Sygna\u0142 jest coraz silniejszy, prowadzi nas w stron\u0119 \u017ar\u00f3d\u0142a. B\u0105d\u017a ostro\u017cny."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 123
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 123,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Nie wierz\u0119 \u017ce zostawisz mnie na tej planecie!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ju\u017c dobrze. Ruszajmy po rozbitka",
+                    "nextoption": 114
+                },
+                {
+                    "text": "Ruszamy zbada\u0107 sygna\u0142",
+                    "nextoption": 124
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 124,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wspaniale. Ruszaj na wsch\u00f3d. \u0179r\u00f3d\u0142o sygna\u0142u jest blisko."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 125
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 125,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Nie zapomn\u0119 Ci tego! Pozostawisz mnie tutaj na \u015bmier\u0107!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zosta\u0144 w schronieniu",
+                    "nextoption": 126
+                },
+                {
+                    "text": "Idziemy",
+                    "nextoption": 127
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 126,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Giniesz w burzy"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nieee",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 127,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed tob\u0105 rozci\u0105gaj\u0105 si\u0119 jakie\u015b ruiny. Wygl\u0105daj\u0105 na ruiny cywilizacji kt\u00f3rej statkiem si\u0119 poruszasz."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Podejd\u017a zbada\u0107 ruiny",
+                    "nextoption": 128
+                },
+                {
+                    "text": "Mam pewne obawy",
+                    "nextoption": 129
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 128,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przed tob\u0105 rozci\u0105ga si\u0119 wielka hala o dziwnych kszta\u0142cie. Na jej \u015brodku znajduje si\u0119 monument, a na nim kryszta\u0142."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zbadaj kryszta\u0142",
+                    "nextoption": 130
+                },
+                {
+                    "text": "Zostaw kryszta\u0142 i uciekaj",
+                    "nextoption": 131
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 129,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Twoje obawy s\u0105 jak najbardziej uzasadnione ale chyba nie mamy wi\u0119kszego wyj\u015bcia. Przed Tob\u0105 rozci\u0105ga si\u0119 wielka hala o dziwnych kszta\u0142cie. Na jej \u015brodku znajduje si\u0119 monument, a na nim kryszta\u0142."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zbadaj kryszta\u0142",
+                    "nextoption": 130
+                },
+                {
+                    "text": "Zostaw kryszta\u0142 i uciekaj",
+                    "nextoption": 131
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 130,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To mi si\u0119 podoba, podchodzisz do kryszta\u0142u."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 132
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 131,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Za daleko zabrn\u0119li\u015bmy. Jak ju\u017c tutaj jeste\u015b to po prostu zbadaj kryszta\u0142..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 132
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 132,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Podchodzisz do kryształu. Analiza w toku..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Szybciej...",
+                    "nextoption": 133
+                }
+            ],
+            "action": "show_waiting_screen_analysis",
+            "act": 2
+        },
+        {
+            "id": 133,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Analiza nic nie wykaza\u0142a ale warto zabra\u0107 kryszta\u0142 na statek. Nigdy nie wiadomo czy nie przyda si\u0119 w przysz\u0142o\u015bci"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Schowaj kryszta\u0142",
+                    "nextoption": 134
+                },
+                {
+                    "text": "Nie wiem czy to dobry pomys\u0142",
+                    "nextoption": 135
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 134,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Masz  kryszta\u0142. Nawet je\u017celi nic nie robi jest to artefakt obcych i zgodnie z umow\u0105 dostaniesz za niego sowite wynagrodzenie"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wracamy na statek",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Poszukajmy rozbitka",
+                    "nextoption": 136
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 135,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Kryszta\u0142 nie wykazuje \u017cadnej aktywno\u015bci wi\u0119c jest niegro\u017any. Przypominam, \u017ce zgodnie z umow\u0105 jest to technologia obcych i dostaniesz za ni\u0105 poka\u017an\u0105 sum\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wracamy na statek",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Poszukajmy rozbitka",
+                    "nextoption": 136
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 136,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Giniesz w burzy"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pomo...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 137,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Oczekiwanie na powrót na statek"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ciężka wspinaczka...",
+                    "nextoption": 138
+                }
+            ],
+            "action": "show_waiting_screen_returning_to_ship",
+            "act": 3
+        },
+        {
+            "id": 138,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Co my\u015blisz o tym, co si\u0119 sta\u0142o na planecie?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie mog\u0119 przesta\u0107 my\u015ble\u0107 o...",
+                    "nextoption": 139
+                },
+                {
+                    "text": "Prawie umar\u0142em/am.",
+                    "nextoption": 139
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 139,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Twoje emocje s\u0105 zrozumia\u0142e. Musisz jednak zachowa\u0107 spok\u00f3j."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Po tym? Trudno zachowa\u0107 spok\u00f3j.",
+                    "nextoption": 140
+                },
+                {
+                    "text": "Masz racj\u0119. Musz\u0119 si\u0119 skupi\u0107.",
+                    "nextoption": 140
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 140,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wiedz\u0119, \u017ce jeste\u015b pod wp\u0142ywem silnego stresu. Moim zdaniem jest zapewni\u0107 pomoc i ochron\u0119. Przywo\u0142uje ECHO."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kto to ECHO?",
+                    "nextoption": 141
+                },
+                {
+                    "text": "Nie ma takiej potrzeby.",
+                    "nextoption": 142
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 141,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To zaawansowane AI zajmuj\u0105ce si\u0119 ludzk\u0105 natur\u0105. Uwierz mi, potrafi pom\u00f3c."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 142
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 142,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Witaj. Jestem ECHO. Jak mog\u0119 ci s\u0142u\u017cy\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Czy to w og\u00f3le ma sens?",
+                    "nextoption": 145
+                },
+                {
+                    "text": "Nie wiem czy mog\u0119 kontynuowa\u0107!",
+                    "nextoption": 145
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 143,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie Ty o tym decydujesz. Siadaj i skup si\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 142
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 144,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Witaj. Jestem ECHO. Jak mog\u0119 Ci s\u0142u\u017cy\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Czy to w og\u00f3le ma sens?",
+                    "nextoption": 145
+                },
+                {
+                    "text": "Nie wiem czy mog\u0119 kontynuowa\u0107!",
+                    "nextoption": 145
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 145,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Twoje pytanie jest istotne ale w tej chwili istotniejsze jest twoje przetrwanie. Skieruj swoje my\u015bli w t\u0119 stron\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Czyli gdzie dok\u0142adnie?",
+                    "nextoption": 146
+                },
+                {
+                    "text": "Chc\u0119 tylko wr\u00f3ci\u0107 do domu.",
+                    "nextoption": 146
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 146,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Uwaga! Wykryto nowy obiekt na kursie kolizyjnym!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co to za obiekt?",
+                    "nextoption": 147
+                },
+                {
+                    "text": "Spr\u00f3bujmy go unikn\u0105\u0107!",
+                    "nextoption": 148
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 147,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To statek podobny do naszego. Spr\u00f3buj\u0119 nawi\u0105za\u0107 kontakt."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 149
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 148,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wiesz co na to protok\u00f3\u0142. To statek podobny do naszego. Spr\u00f3buj\u0119 nawi\u0105za\u0107 kontakt."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 149
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 149,
+            "person": "Dow\u00f3dca statku",
+            "variant": [
+                {
+                    "text": "Tu dow\u00f3dca statku Explorator. Kim jeste\u015bcie?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ekspedycj\u0105 naukow\u0105.",
+                    "nextoption": 150
+                },
+                {
+                    "text": "Co tu robisz?",
+                    "nextoption": 150
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 150,
+            "person": "Dow\u00f3dca statku",
+            "variant": [
+                {
+                    "text": "Tkwimy tutaj! Nie zbli\u017cajcie si\u0119! Utkn\u0119li\u015bmy w polu grawitacyjnym czarnej dziury!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "D\u0142ugo tutaj jeste\u015b?",
+                    "nextoption": 151
+                },
+                {
+                    "text": "Manewr unikowy! TERAZ!",
+                    "nextoption": 152
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 151,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Rozszarpują cię siły pływowe czarnej dziury"
+                }
+            ],
+            "options": [
+                {
+                    "text": "...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_black_hole",
+            "act": 3
+        },
+        {
+            "id": 152,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "W ostatniej chwili uda\u0142o unikn\u0105\u0107 si\u0119 tego pola grawitacyjnego! Nie powiem, by\u0142o gor\u0105co!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Jak d\u0142ugo tutaj jeste\u015b?",
+                    "nextoption": 153
+                },
+                {
+                    "text": "Masz zapasy?",
+                    "nextoption": 153
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 153,
+            "person": "Dow\u00f3dca statku",
+            "variant": [
+                {
+                    "text": "Wszystko si\u0119 ju\u017c sko\u0144czy\u0142o. Wczoraj zjad\u0142em potrawk\u0119 z but\u00f3w. Moja jedyna nadzieja to czarna dziura. Nie chcia\u0142bym nikogo stawia\u0107 przed takim dylematem ale dla mnie wyb\u00f3r jest oczywisty."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Horyzont zdarze\u0144 to \u015bmier\u0107.",
+                    "nextoption": 154
+                },
+                {
+                    "text": "Jedyna szansa...",
+                    "nextoption": 154
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 154,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Rekomenduj\u0119 zako\u0144czenie komunikacji. Obiekt jest generalnie niestabilny i jeszcze mo\u017cemy podzieli\u0107 ten los."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Jest szansa uratowa\u0107 kapitana.",
+                    "nextoption": 155
+                },
+                {
+                    "text": "Uciekamy!",
+                    "nextoption": 156
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 155,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Rozszarpują cię siły pływowe czarnej dziury"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ał...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_black_hole",
+            "act": 3
+        },
+        {
+            "id": 156,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Uda\u0142o nam si\u0119 oddali\u0107 od czarnej dziury. Nasze systemy wykaza\u0142y niezwykle silne zak\u0142\u00f3cenia grawitacyjne. Jak si\u0119 trzymasz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oszaleje.",
+                    "nextoption": 157
+                },
+                {
+                    "text": "Ten cz\u0142owiek?",
+                    "nextoption": 157
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 157,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Twoje reakcje s\u0105 zrozumia\u0142e. Widok kapitana Exploratora, kt\u00f3ry zgin\u0105\u0142, rzucaj\u0105c si\u0119 w pola p\u0142ywowe, musoa\u0142 by\u0107 traumatyczny."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie da\u0142o si\u0119 nic zrobi\u0107.",
+                    "nextoption": 158
+                },
+                {
+                    "text": "Kiedy\u015b o tym zapomn\u0119?",
+                    "nextoption": 158
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 158,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Nie mia\u0142\u0119\u015b wp\u0142ywu na jego decyzj\u0119. Kapitan Exploratora wybra\u0142 sw\u00f3j los. Musimy jednak kontynuowa\u0107 misj\u0119."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 159
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 159,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Do\u015b\u0107 ju\u017c wra\u017ce\u0144. Wracam na kurs, a Tobie proponuj\u0119 uda\u0107 si\u0119 do komory hibernacyjnej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Chyba nie mam wyj\u015bcia.",
+                    "nextoption": 160
+                },
+                {
+                    "text": "Tak, odpoczn\u0119.",
+                    "nextoption": 160
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 160,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Hibernacja"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 161
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 3
+        },
+        {
+            "id": 161,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Uwaga! Wykryto kolejn\u0105 jednostk\u0119 na kursie!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zeskanuj go.",
+                    "nextoption": 162
+                },
+                {
+                    "text": "Wchodzimy na pok\u0142ad.",
+                    "nextoption": 164
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 162,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Skanowanie w toku... Ten statek nie wykazuje \u017cadnych oznak \u017cycia. Strukturalnie jest nienaruszony, ale systemy energetyczne s\u0105 martwe."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Podejrzane.",
+                    "nextoption": 163
+                },
+                {
+                    "text": "Nic dziwnego.",
+                    "nextoption": 163
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 163,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Proponuj\u0119 zbli\u017cy\u0107 si\u0119 do statku."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 164
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 164,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Przygotowuj\u0119 si\u0119 na manewr dokuj\u0105cy. Za kilka minut b\u0119dziemy przy statku"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 165
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 165,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dokowanie"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kliknij aby kontunuować",
+                    "nextoption": 166
+                }
+            ],
+            "action": "info_screen_docking",
+            "act": 3
+        },
+        {
+            "id": 166,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zdecydowanie co\u015b tu nie gra. Cisza jest niemal z\u0142owroga. Czy jeste\u015b pewien, \u017ce chcesz wej\u015b\u0107 na pok\u0142ad?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wchodzimy!",
+                    "nextoption": 167
+                },
+                {
+                    "text": "Zabieramy si\u0119 z t\u0105d!",
+                    "nextoption": 168
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 167,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Chyba ju\u017c troch\u0119 za p\u00f3\u017ano. We\u017a si\u0119 w gar\u015b\u0107!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 169
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 168,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Inicjuj\u0119 procedur\u0119 wej\u015bcia. B\u0105d\u017a przygotowany na wszelkie niespodzianki."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 169
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 169,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "\u015aluza otwarta. Atmosfera jest stabilna, ale ciemno\u015b\u0107 w \u015brodku jesy przyt\u0142aczaj\u0105ca. W\u0142\u0105cz latarki."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 170
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 170,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Czuj\u0119, jakby\u015bmy przekraczali granic\u0119 czego\u015b nieznanego. Czy czujesz to samo?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Czuj\u0119... Cisz\u0119...",
+                    "nextoption": 171
+                },
+                {
+                    "text": "Mrok...",
+                    "nextoption": 171
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 171,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Skanowanie pok\u0142adu. Nie ma tu \u017cadnych form \u017cycia. Wszystkie systemy s\u0105 wy\u0142\u0105czone, a za\u0142oga... znikn\u0119\u0142a."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 172
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 172,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "To niemo\u017cliwe, aby statek tak po prostu opu\u015bci\u0107. Musimy odkry\u0107, co si\u0119 sta\u0142o. Co chcesz zrobi\u0107?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Kantyna. Za\u0142oga",
+                    "nextoption": 173
+                },
+                {
+                    "text": "Mostek. Dzienniki pok\u0142adowe.",
+                    "nextoption": 175
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 173,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie odbieram oznak \u017cycia ale jak chcesz mo\u017cemy tam zajrze\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 174
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 174,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jak m\u00f3wi\u0142em. Nic tutaj nie ma. Puste, martwe \u015bciany. Idziemy na mostek."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 175
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 175,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wchodzisz na mostek. Jak tutaj spokojnie. Pod\u0142\u0105cz\u0119 si\u0119 do interfejsu statku. Zobacz\u0119 co si\u0119 uda wyci\u0105gn\u0105\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 176
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 176,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Znalaz\u0142em dzienniki pok\u0142adowe Ostatnie wpisy s\u0105 przera\u017caj\u0105ce. M\u00f3wi\u0105 o tajemniczym sygnale, kt\u00f3ry doprowadzi\u0142 do... szale\u0144stwa ca\u0142ej za\u0142ogi.\r\n\r\n [Ko\u0142o, Kwadrat, Krzy\u017c]\r\n[P\u00f3\u0142noc, Wsch\u00f3d, Po\u0142udnie]"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Jaki sygna\u0142?",
+                    "nextoption": 177
+                },
+                {
+                    "text": "Czeka nas to samo?",
+                    "nextoption": 177
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 177,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Sygna\u0142y mog\u0105 wp\u0142yn\u0105\u0107 na umys\u0142 w spos\u00f3b, kt\u00f3rego nie rozumiemy. Musimy to zbada\u0107, ale ostro\u017cnie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zlokalizuj sygna\u0142.",
+                    "nextoption": 179
+                },
+                {
+                    "text": "Chyba pora si\u0119 zabiera\u0107.",
+                    "nextoption": 178
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 178,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Chyba musimy to sprawdzi\u0107. Sygna\u0142 mo\u017ce mie\u0107 na nas wp\u0142yw r\u00f3wnie\u017c na znaczn\u0105 odleg\u0142o\u015b\u0107. Nie mamy wyboru. Zbieraj si\u0119"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ruszajmy.",
+                    "nextoption": 180
+                },
+                {
+                    "text": "Mam obawy.",
+                    "nextoption": 180
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 179,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Lokalizowanie sygna\u0142u... Jest bardzo s\u0142aby, ale zdaje si\u0119 pochodzi\u0107 z g\u0142\u0119bi statku. Musimy zej\u015b\u0107 ni\u017cej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ruszajmy",
+                    "nextoption": 180
+                },
+                {
+                    "text": "Mam obawy.",
+                    "nextoption": 180
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 180,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zbli\u017camy si\u0119 do rozwidlenia. Musisz podj\u0105\u0107 decyzj\u0119, kt\u00f3r\u0105 drog\u0105 chcesz i\u015b\u0107"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 181
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 181,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Droga w lewo prowadzi w stron\u0119 pomieszcze\u0144 technicznych. Czuj\u0119 zak\u0142\u00f3cenia w systemach. Uwa\u017caj."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 182
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 182,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Droga w prawo prowadzi do starych \u0142adowni. Jest tu zimno, jakby systemy podtrzymywania \u017cycia by\u0142y dawno wy\u0142\u0105czone."
+                }
+            ],
+            "options": [
+                {
+                    "text": "W lewo.",
+                    "nextoption": 196
+                },
+                {
+                    "text": "Zaryzykuj\u0119 w prawo.",
+                    "nextoption": 183
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 183,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wybra\u0142e\u015b drog\u0119 w prawo. To prowadzi do sekcji magazynowej statku. Czuj\u0119, jak powietrze tutaj jest nienaturalnie zimne. Systemy podtrzymywania \u017cycia wydaj\u0105 si\u0119 by\u0107 wy\u0142\u0105czone od lat."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 184
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 184,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Co\u015b tutaj nie gra. Powietrze jest g\u0119ste i ch\u0142odne. jakby\u015bmy byli g\u0142\u0119boko pod wod\u0105. Czy te\u017c to czujesz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "To tylko klimat statku. Kontynuujemy.",
+                    "nextoption": 185
+                },
+                {
+                    "text": "Tak, co\u015b tu jest... nienaturalne.",
+                    "nextoption": 187
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 185,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie przemy\u015bleli\u015bmy tego. Zimno staje si\u0119 przyt\u0142aczaj\u0105ce, systemy podtrzymywania \u017cycia tego nie d\u017awign\u0105..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 186
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 186,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zamarzasz na miejscu"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Tyl...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_coldness",
+            "act": 3
+        },
+        {
+            "id": 187,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wykrywam blokad\u0119 magnetyczn\u0105. Potrzebujemy specjalnego klucza do jej otwarcia."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 188
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 188,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "To musi by\u0107 zagadka. Czasami statki tego typu maj\u0105 zabezpieczenia oparte na logice. Mo\u017ce znajdziemy odpowied\u017a, je\u015bli skupimy si\u0119 na wcze\u015bniejszych informacjach."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Przeoczyli\u015bmy co\u015b?",
+                    "nextoption": 189
+                },
+                {
+                    "text": "Mo\u017ce to co\u015b prostego.",
+                    "nextoption": 189
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 189,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Znajdujesz panel z uk\u0142adem magnetycznym, kt\u00f3ry wymaga ustawienia trzech kluczy w odpowiedniej kolejno\u015bci."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 190
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 190,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Ten mechanizm wygl\u0105da znajomo... To jakby uk\u0142ad nawigacyjny. Pami\u0119tasz te wskaz\u00f3wki z dziennika pok\u0142adowego?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zach\u00f3d, Wsch\u00f3d, P\u00f3\u0142noc",
+                    "nextoption": 191
+                },
+                {
+                    "text": "P\u00f3\u0142noc, Wsch\u00f3d, Po\u0142udnie",
+                    "nextoption": 193
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 191,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie przemy\u015bleli\u015bmy tego. Zimno staje si\u0119 przyt\u0142aczaj\u0105ce, systemy podtrzymywania \u017cycia tego nie d\u017awign\u0105..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 192
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 192,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zamarzasz na miejscu"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Źl...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_coldness",
+            "act": 3
+        },
+        {
+            "id": 193,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dobrze, mechanizm zaakceptowa\u0142 uk\u0142ad. Blokada si\u0119 otwiera, droga jest wolna. Ale uwa\u017caj, to miejsce jest coraz bardziej niestabilne."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 194
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 194,
+            "person": "Rozbitek",
+            "variant": [
+                {
+                    "text": "Czy czujesz, jak energia w tym miejscu staje si\u0119 coraz bardziej chaotyczna? To, co tu si\u0119 dzieje, nie jest naturalne. Musimy by\u0107 ostro\u017cni."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Musimy to rozwi\u0105za\u0107.",
+                    "nextoption": 195
+                },
+                {
+                    "text": "Powoli. Ruszajmy.",
+                    "nextoption": 195
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 195,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zbli\u017camy si\u0119 do \u017ar\u00f3d\u0142a sygna\u0142u. To ju\u017c niedaleko. Skanery wykrywaj\u0105 silne zak\u0142\u00f3cenia elektromagnetyczne, ale mo\u017cemy kontynuowa\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 206
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 196,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zbli\u017camy si\u0119 do \u017ar\u00f3d\u0142a sygna\u0142u Znajdujemy si\u0119 w korytarzu technicznym, ale co\u015b jest nie tak. Atmosfera staje si\u0119 ci\u0119\u017cka."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 197
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 197,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Czujesz to? Powietrze tutaj jest nienaturalnie g\u0119ste... jakby co\u015b chcia\u0142o nas zatrzyma\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mo\u017ce powinni\u015bmy zawr\u00f3ci\u0107?",
+                    "nextoption": 198
+                },
+                {
+                    "text": "Tak, czuj\u0119 to. Musimy i\u015b\u0107 dalej.",
+                    "nextoption": 200
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 198,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Ta mg\u0142a to jaki\u015b gaz... system podtrzymywania \u017cycia..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 199
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 199,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Umierasz w wynikuzatrucia gazem"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie mogę odd...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_gas_intoxication",
+            "act": 3
+        },
+        {
+            "id": 200,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zdecydowa\u0142e\u015b si\u0119 i\u015b\u0107 dalej. Ale mamy problem - pojawi\u0142a si\u0119 blokada. To rodzaj mechanicznego zamka z symbolem."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Figury geometryczne?",
+                    "nextoption": 201
+                },
+                {
+                    "text": "Znaki logiczne...",
+                    "nextoption": 201
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 201,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Widzieli\u015bmy ten symbol wcze\u015bniej To przypomina to, co czytali\u015bmy w dziennikach pok\u0142adowych. Jest to mechanizm zabezpieczaj\u0105cy. Potrzebujemy kodu."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 202
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 202,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wprowad\u017a sekwencj\u0119. Pami\u0119tasz, co by\u0142o w dzienniku?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ko\u0142o, Tr\u00f3jk\u0105t, Kwadrat.",
+                    "nextoption": 203
+                },
+                {
+                    "text": "Ko\u0142o, Kwadrat, Krzy\u017c.",
+                    "nextoption": 205
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 203,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Ta mg\u0142a to jaki\u015b gaz... system podtrzymywania \u017cycia..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 204
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 204,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Umierasz w wynikuzatrucia gazem"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nie mogę odd...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_gas_intoxication",
+            "act": 3
+        },
+        {
+            "id": 205,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Sekwencja zaakceptowana. Mechanizm si\u0119 otwiera, a my jeste\u015bmy coraz bli\u017cej \u017ar\u00f3d\u0142a sygna\u0142u."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 206
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 206,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Co\u015b tu jest. Czuj\u0119 to. To nie jest zwyk\u0142y statek. Co\u015b bardziej niepokoj\u0105cego dzieje si\u0119 wok\u00f3\u0142 nas"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Musimy sprawdzi\u0107 \u017ar\u00f3d\u0142o sygna\u0142u.",
+                    "nextoption": 207
+                },
+                {
+                    "text": "To miejsce wydaje si\u0119... martwe.",
+                    "nextoption": 207
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 207,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Centralna komora jest przed nami. Zablokowana, ale mog\u0119 j\u0105 otworzy\u0107 r\u0119cznie. Otwieram... uwa\u017caj."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 208
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 208,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie powinni\u015bcie tu by\u0107. To miejsce by\u0142o zamkni\u0119te.. by chroni\u0107 was przed tym, co tu jest."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 209
+                }
+            ],
+            "action": "show_waiting_screen_alien",
+            "act": 3
+        },
+        {
+            "id": 209,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To on. Znale\u017ali\u015bmy \u017ar\u00f3d\u0142o sygna\u0142u. Kim jeste\u015b? Dlaczego nas ostrzegasz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 210
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 210,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Jestem wi\u0119\u017aniem tego miejsca. Nie kontruluj\u0119 si\u0119... To, co tu jest, nie mo\u017ce by\u0107 uwolnione."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dlaczego zosta\u0142e\u015b tu zamkni\u0119ty?",
+                    "nextoption": 211
+                },
+                {
+                    "text": "Czy ty wys\u0142a\u0142e\u015b sygna\u0142?",
+                    "nextoption": 211
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 211,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Sygna\u0142... mia\u0142 by\u0107 ostrze\u017ceniem. Moja natura jest poza moj\u0105 kontrol\u0105. Je\u015bli mnie uwolnisz, mo\u017cesz wywo\u0142a\u0107 co\u015b, czego nie jeste\u015b w stanie zrozumie\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 212
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 212,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jego energia jest niestabilna. Systemy statku zaczynaj\u0105 reagowa\u0107 na jego obecno\u015b\u0107. Musimy zdecydowa\u0107, co dalej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 213
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 213,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "On m\u00f3wi, \u017ce nie kontroluje swoich mocy. Ale musimy dowiedzie\u0107 si\u0119 wi\u0119cej. Co\u015b jest tu nie tak."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Jaka natura? Co si\u0119 tu dzieje?",
+                    "nextoption": 214
+                },
+                {
+                    "text": "Czy mo\u017cemy ci pom\u00f3c?",
+                    "nextoption": 214
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 214,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie wiem, czy jest jakikolwiek spos\u00f3b, by to zatrzyma\u0107. Moja rasa... bada\u0142a wymiary. Statki, kt\u00f3re wysy\u0142ali\u015bmy, wraca\u0142y z czym\u015b wi\u0119cej ni\u017c tylko informacjami. Teraz nie mog\u0119 tego zatrzyma\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 215
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 215,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statki... wraca\u0142y z czym\u015b wi\u0119cej? Jakie by\u0142o ich zadanie?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 216
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 216,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Naszym celem by\u0142o zg\u0142\u0119bianie innych rzeczywisto\u015bci, ale nie byli\u015bmy przygotowani na to, co zacz\u0119li\u015bmy zbiera\u0107. Statki wraca\u0142y z anomaliami, kt\u00f3re zmienia\u0142y rzeczywisto\u015b\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 217
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 217,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Anomalie? Jakie zagro\u017cenie one stanowi\u0105? Dlaczego te statki wraca\u0142y?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "By\u0142o wi\u0119cej baz?",
+                    "nextoption": 218
+                },
+                {
+                    "text": "Dlaczego nie przerwali\u015bcie misji?",
+                    "nextoption": 218
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 218,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie mogli\u015bmy przerwa\u0107 cyklu. Bazy, kt\u00f3re zbudowali\u015bmy, by\u0142y rozproszone po wszech\u015bwiecie. Jedn\u0105 z kluczowych jest baza na waszym Ksi\u0119\u017cycu."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 219
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 219,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To brzmi znajomo. Statki, kt\u00f3rymi podr\u00f3\u017cowali\u015bmy z Ksi\u0119\u017cyca, mog\u0105 by\u0107 cz\u0119\u015bci\u0105 tego samego cyklu. To by wyja\u015bnia\u0142o wiele."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 220
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 220,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Ksi\u0119\u017cyc... to tylko jeden z w\u0119z\u0142\u00f3w. Statki wracaj\u0105 tam z misji w innych wymiarach. Ka\u017cdy powr\u00f3t mo\u017ce przynie\u015b\u0107 co\u015b nieprzewidywalnego."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 221
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 221,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "To dlatego statki, kt\u00f3rymi teraz lecimy, s\u0105 tak dziwne. Wracaj\u0105 z czym\u015b, czego nie mo\u017cemy kontrolowa\u0107. Co teraz?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Musimy dowiedzie\u0107 si\u0119 wi\u0119cej.",
+                    "nextoption": 222
+                },
+                {
+                    "text": "Musimy si\u0119 wydosta\u0107.",
+                    "nextoption": 222
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 222,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statki, kt\u00f3rymi teraz podr\u00f3\u017cujemy, mog\u0105 by\u0107 cz\u0119\u015bci\u0105 tego cyklu. Je\u015bli to prawda, nie tylko my jeste\u015bmy zagro\u017ceni - to mo\u017ce wp\u0142yn\u0105\u0107 na ca\u0142y \u015bwiat."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 223
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 223,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Czy baza na Ksi\u0119\u017cycu to miejsce, gdzie wracaj\u0105 wszystkie statki? Jakie zagro\u017cenie one przenosz\u0105?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mo\u017cemy to zatrzyma\u0107?",
+                    "nextoption": 224
+                },
+                {
+                    "text": "Czy te statki s\u0105 poza kontrol\u0105?",
+                    "nextoption": 224
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 224,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie wiem, jak mo\u017cna to zatrzyma\u0107. Statki s\u0105 cz\u0119\u015bci\u0105 cyklu, kt\u00f3ry dzia\u0142a niezale\u017cnie od naszej woli. Ale wiem jedno - ka\u017cdy powr\u00f3t przynosi co\u015b, co mo\u017ce zmieni\u0107 wasz\u0105 rzeczywisto\u015b\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 225
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 225,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Musimy dzia\u0142a\u0107 szybko. Systemy tego statku zaczynaj\u0105 si\u0119 rozpada\u0107. Obcy m\u00f3wi, \u017ce jego moce mog\u0105 nas zniszczy\u0107, ale je\u015bli go zostawimy..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 226
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 226,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie mog\u0119 kontrolowa\u0107 tego, co si\u0119 dzieje. Ale je\u015bli mnie tu zostawisz, cykl b\u0119dzie trwa\u0142. Statki b\u0119d\u0105 wraca\u0107, a to, co przynios\u0105, b\u0119dzie katastrofalne."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pom\u00f3\u017cmy mu si\u0119 st\u0105d wydosta\u0107.",
+                    "nextoption": 227
+                },
+                {
+                    "text": "To zbyt ryzykowne.",
+                    "nextoption": 228
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 227,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Je\u015bli mu pomo\u017cemy, mo\u017ce nam pom\u00f3c zrozumie\u0107, co dzieje si\u0119 z baz\u0105 ksi\u0119\u017cycow\u0105 i statkami. Ale ryzykujemy nieprzewidywalne konsekwencje"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 229
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 228,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To ogromne ryzyko. Jego moce s\u0105 nieprzewidywalne. Je\u015bli go uwolnimy, mo\u017cemy nie mie\u0107 kontroli nad tym, co si\u0119 stanie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 229
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 229,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "To Twoja decyzja. Je\u015bli mnie zostawisz, mo\u017ce by\u0107 za p\u00f3\u017ano. Je\u015bli spr\u00f3bujesz mi pom\u00f3c, razem mo\u017cemy wydosta\u0107 si\u0119 z tego statku i zrozumie\u0107, co nadchodzi."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 230
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 230,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Systemy statku zaczynaj\u0105 si\u0119 rozpada\u0107. Je\u015bli mamy pom\u00f3c obcemu, musimy to zrobi\u0107 teraz."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 231
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 231,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Je\u015bli zaryzykujemy i pomo\u017cemy mu, mo\u017cemy odkry\u0107 prawd\u0119 a statkach. Ale jesli co\u015b p\u00f3jdzie nie tak, mo\u017cemy straci\u0107 wszystko."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Pomog\u0119 Ci.",
+                    "nextoption": 234
+                },
+                {
+                    "text": "Na mnie nie licz.",
+                    "nextoption": 232
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 232,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statek si\u0119 rozpada..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 233
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 233,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statek wybucha"
+                }
+            ],
+            "options": [
+                {
+                    "text": "BOOM!!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_ship_explosion",
+            "act": 3
+        },
+        {
+            "id": 234,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Nie wiem, czy to si\u0119 uda, ale musimy spr\u00f3bowa\u0107. Musimy wydosta\u0107 si\u0119 st\u0105d, zanim ten statek si\u0119 rozpadnie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 235
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 235,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Systemy statku s\u0105 na kraw\u0119dzi awarii. Musimy dzia\u0142a\u0107 szybko, zanim wszystko si\u0119 zawali. Jeste\u015b got\u00f3w?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Znajd\u017amy drog\u0119 wyj\u015bcia.",
+                    "nextoption": 236
+                },
+                {
+                    "text": "Musimy by\u0107 ostro\u017cni.",
+                    "nextoption": 236
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 236,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "\u015acie\u017cki w tym statku s\u0105 z\u0142o\u017cone. Mo\u017ce znajdziemy alternatywn\u0105 drog\u0119 przez sekcj\u0119 techniczn\u0105."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 237
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 237,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Ten statek by\u0142... wi\u0119zieniem. S\u0105 tu miejsca, spl\u0105tane z innymi miejscami w innych czasach i rzeczywisto\u015bciach. Musimy unika\u0107 stref zamkni\u0119tych..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Unikajmy tych stref.",
+                    "nextoption": 238
+                },
+                {
+                    "text": "Zaryzykujmy ale ostro\u017cnie.",
+                    "nextoption": 238
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 238,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zlokalizowa\u0142em sekcj\u0119 techniczn\u0105. To najkr\u00f3tsza droga, ale jej systemy mog\u0105 by\u0107 niestabilne. Przej\u015bcie przez ni\u0105 b\u0119dzie ryzykowne."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 239
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 239,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Obawiam si\u0119, \u017ce sama moja obecno\u015b\u0107 mo\u017ce zdestabilizowa\u0107 systemy. Je\u015bli co\u015b p\u00f3jdzie nie tak... ca\u0142y statek mo\u017ce zapa\u015b\u0107 sie na siebie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Idziemy dalej.",
+                    "nextoption": 240
+                },
+                {
+                    "text": "Mo\u017ce znajdziemy inn\u0105 drog\u0119?",
+                    "nextoption": 240
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 240,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Sekcja techniczna zaczyna traci\u0107 zasilanie. Cz\u0119\u015b\u0107 system\u00f3w jest wy\u0142\u0105czona, ale wykrywam ruch... co\u015b tu jest."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Musimy to sprawdzi\u0107. Gotowy?",
+                    "nextoption": 241
+                },
+                {
+                    "text": "Lepiej si\u0119 ukryjmy.",
+                    "nextoption": 241
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 241,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "To wygl\u0105da jak systemy obronne statku. Pr\u00f3buj\u0105 zapobiec ucieczce."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 242
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 242,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "...mog\u0119 spr\u00f3bowa\u0107 je zak\u0142\u00f3ci\u0107, zanim si\u0119 zbli\u017cymy."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 243
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 243,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Zak\u0142\u00f3cenie system\u00f3w mo\u017ce destabilizowa\u0107 statek. To ryzyko, ale mo\u017ce nam da\u0107 szans\u0119 na przej\u015bcie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Spr\u00f3buj zak\u0142\u00f3ci\u0107 systemy.",
+                    "nextoption": 245
+                },
+                {
+                    "text": "Nie, zr\u00f3bmy to po cichu.",
+                    "nextoption": 244
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 244,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "... za p\u00f3\u017ano ... zaczynam zak\u0142\u00f3canie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 246
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 245,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Dobrze, spr\u00f3buj\u0119 zak\u0142\u00f3ci\u0107 system. To mo\u017ce nas przepu\u015bci\u0107, ale nie wiem, jakie b\u0119d\u0105 konsekwencje."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 246
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 246,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Systemy zaczynaj\u0105 si\u0119 destabilizowa\u0107. Statek wpada w wibracje. Musimy si\u0119 po\u015bpieszy\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 247
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 247,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Mo\u017cemy si\u0119 po\u015bpieszy\u0107. Zaczyna mn\u0105 rzuca\u0107 i trac\u0119 panowanie ..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Szybciej, musimy ucieka\u0107!",
+                    "nextoption": 248
+                },
+                {
+                    "text": "Nie poddawaj si\u0119.",
+                    "nextoption": 248
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 248,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Mamy kilka sekund, zanim ten sektor si\u0119 zawali. Mo\u017cemy przej\u015b\u0107, ale musimy biec."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 249
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 249,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "\u015acie\u017cka na prawo, prowadzi prosto do wyj\u015bcia. To nasza jedyna szansa..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Biegnijmy tam!",
+                    "nextoption": 250
+                },
+                {
+                    "text": "Har\u00fbn'kal, trzymaj si\u0119!",
+                    "nextoption": 250
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 250,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Sekcja przed nami si\u0119 zawali\u0142a, ale wykrywam inny w\u0105ski tunel po lewej stronie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 251
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 251,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Ten tunel... mo\u017ce by\u0107 nasz\u0105 jedyn\u0105 drog\u0105. Ale nie wiem, jak d\u0142ugo dam rade to kontrolowa\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Spr\u00f3bujmy, to jedyna opcja.",
+                    "nextoption": 252
+                },
+                {
+                    "text": "Je\u015bli jest zbyt niebezpiecznie...",
+                    "nextoption": 252
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 252,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Tunel jest w\u0105ski, ale wygl\u0105da na stabilny. Je\u015bli to nasza jedyna szansa, musimy spr\u00f3bowa\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 263
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 253,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Prowadzi do zewn\u0119trznej sekcji statku. Z tej strony mo\u017cemy dosta\u0107 si\u0119 na mostek i stamt\u0105d pr\u00f3bowa\u0107 wr\u00f3ci\u0107 do twojego statku."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 254
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 254,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Je\u015bli dostaniemy si\u0119 na mostek, mo\u017ce uda mi si\u0119 otworzy\u0107 wyj\u015bcie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dobrze, id\u017amy na mostek",
+                    "nextoption": 255
+                },
+                {
+                    "text": "Zr\u00f3bmy to, ale b\u0105d\u017a ostro\u017cny.",
+                    "nextoption": 255
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 255,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Wykrywam ruch w pobli\u017cu mostka. Systemy obronne statku nadal dzia\u0142aj\u0105. Bedziemy musieli je omin\u0105\u0107."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 256
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 256,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Mog\u0119 spr\u00f3bowa\u0107 wywo\u0142a\u0107 eksplozj\u0119..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wysadzaj!",
+                    "nextoption": 257
+                },
+                {
+                    "text": "Omijamy.",
+                    "nextoption": 260
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 257,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Nie b\u0119dzie \u0142atwo omin\u0105\u0107 systemy obronne statku..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 258
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 258,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statek skupia si\u0119 na nas..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 259
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 259,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Statek wybucha"
+                }
+            ],
+            "options": [
+                {
+                    "text": "BOOM!!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_ship_explosion",
+            "act": 3
+        },
+        {
+            "id": 260,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Ryzyko jest du\u017ce. Systemy obronne mog\u0105 zareagowa\u0107 na nasz ruch. Musimy by\u0107 szybcy."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 261
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 261,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Wysadzam!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 262
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 262,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Dotarli\u015bmy do mostka. Musimy szybko otworzy\u0107 wyj\u015bcie, zanim statek si\u0119 rozpadnie."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 263
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 263,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Otwieram wyj\u015bcie"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 264
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 264,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Droga do twojego statku jest wolna, Har\u00fbn'kal ledwo si\u0119 trzyma, ale mamy szans\u0119 na powr\u00f3t. Musimy si\u0119 po\u015bpieszy\u0107"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 265
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+	{
+            "id": 265,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "Powrót na statek"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Trudna to była droga, ale już za nami",
+                    "nextoption": 266
+                }
+            ],
+            "action": "info_screen_docking",
+            "act": 3
+        },
+        {
+            "id": 266,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Jeste\u015bmy z powrotem na statku. Wszystkie systemy dzia\u0142aj\u0105 stabilnie. Har\u00f4n'kal wygl\u0105da na wyczerpanego, ale stabilnego."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 267
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 267,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Mamy dwie opcje: mo\u017cemy wr\u00f3ci\u0107 do korporacji z Har\u00fbn'kal i otrzyma\u0107 ogromn\u0105 nagrod\u0119. Albo... mo\u017cemy spr\u00f3bowa\u0107 znale\u017a\u0107 spos\u00f3b na zatrzymanie cyklu w bazie ksi\u0119\u017cycowej."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Co oferuje korporacja?",
+                    "nextoption": 268
+                },
+                {
+                    "text": "Czy powinni\u015bmy mu uwierzy\u0107?",
+                    "nextoption": 268
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 268,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Je\u015bli oddasz Har\u00fbn'kal korporacji zyskasz s\u0142aw\u0119 i maj\u0105tek. Korporacja ma technologi\u0119, aby zrozumie\u0107 jego... natur\u0119. Ale... s\u0105 te\u017c ryzyka."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 269
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 269,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Je\u015bli mnie oddasz, b\u0119d\u0105 pr\u00f3bowa\u0107 mnie kontrolowa\u0107. Ale to, co nadchodzi, jest wi\u0119ksze ni\u017c oni mog\u0105 poj\u0105\u0107. Cykl si\u0119 nie zatrzyma, a to, co wraca, zniszczy wasz \u015bwiat."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dlaczego cykl jest taki gro\u017any?",
+                    "nextoption": 270
+                },
+                {
+                    "text": "Co korporacja z tob\u0105 zrobi?",
+                    "nextoption": 270
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 270,
+            "person": "Har\u00fbn'kal",
+            "variant": [
+                {
+                    "text": "Korporacja nie rozumie tego, czym naprawd\u0119 s\u0105 te statki. B\u0119d\u0105 my\u015ble\u0107, \u017ce to tylko technologia do zdobycia. Ale ka\u017cda misja przynosi co\u015b, czego nie mo\u017cna kontrolowa\u0107. Nie zrozumiej\u0105, dop\u00f3ki nie b\u0119dzie za p\u00f3\u017ano."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 271
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 271,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Korporacja zap\u0142aci ci miliony za odkrycie. Mog\u0105 pr\u00f3bowa\u0107 kontrolowa\u0107 Har\u00fbn'kal, ale to ci\u0119 ustawi na ca\u0142e \u017cycie. Pami\u0119taj, to mo\u017ce by\u0107 twoja jedyna szansa."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 272
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 272,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Odbieram wiadomo\u015b\u0107 od korporacji. S\u0105 gotowi zainwestowa\u0107 miliony w tw\u00f3j powr\u00f3t. Oczekuj\u0105 odpowiedzi."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oddaj obcego w r\u0119ce korporacji.",
+                    "nextoption": 273
+                },
+                {
+                    "text": "Po\u0142\u0105cz si\u0142y aby zatrzyma\u0107 cykl.",
+                    "nextoption": 273
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 273,
+            "person": "Centrum kontroli lotu",
+            "variant": [
+                {
+                    "text": "Decyzja zapad\u0142a, ci\u0105g dalszy historii ju\u017c wkr\u00f3tce ..."
+                }
+            ],
+            "options": [],
+            "action": "show_end_screen",
+            "act": 3
+        }
+    ]
+}

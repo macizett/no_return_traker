@@ -1,0 +1,5251 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "variant": [
+                {
+                    "text": "Introduction"
+                }
+            ],
+            "options": [
+                {
+                    "text": "This is not a story about gold, silver, religion, or politics, but about something far more fascinating— the forgotten legacy of other, alien civilizations...",
+                    "nextoption": 1
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 1,
+            "variant": [
+                {
+                    "text": "Prologue"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Focused on gazing into the farthest reaches of the universe, humanity had forgotten about its nearest satellite—the Moon. Eventually, on its dark side, an ancient base of a long-forgotten alien civilization was discovered, filled with countless interstellar ships...\n\n",
+                    "nextoption": 2
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 2,
+            "variant": [
+                {
+                    "text": "Prologue"
+                }
+            ],
+            "options": [
+                {
+                    "text": "The question Where do we come from? became more relevant than ever, but the only thing we managed to figure out was how to activate the ships, which traveled to unknown destinations and did not always return...\n\nA special corps was created, allowing anyone, regardless of social status, to join and form a crew with other adventurers, embarking on a journey of 'No Return'...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "show_intro_screen",
+            "act": 1
+        },
+        {
+            "id": 3,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "The Recruitment Officer is calling"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Answer",
+                    "nextoption": 4
+                }
+            ],
+            "action": "show_officer_call_screen",
+            "act": 1
+        },
+        {
+            "id": 4,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Another one... Welcome to the recruitment center! How should we address you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Mr...",
+                    "nextoption": 5
+                },
+                {
+                    "text": "Ms...",
+                    "nextoption": 5
+                }
+            ],
+            "action": "save_gender_choice",
+            "act": 1
+        },
+        {
+            "id": 5,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Do you even know what you're signing up for? Few ever return."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I have my reasons.",
+                    "nextoption": 6
+                },
+                {
+                    "text": "None of your business.",
+                    "nextoption": 7
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 6,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Alright then. Let's move on to the recruitment procedure... Which mission will this be for you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "This will be my first mission.",
+                    "nextoption": 8
+                },
+                {
+                    "text": "[Lie] I think it's my third.",
+                    "nextoption": 9
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 7,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "You're right. I won't ask again. Let's move on to the recruitment procedure... Which mission will this be?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "This will be my first mission.",
+                    "nextoption": 8
+                },
+                {
+                    "text": "[Lie] I think it's my third.",
+                    "nextoption": 9
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 8,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Alright. So we’re starting from scratch. Do you prefer a crewed mission or a solo flight?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I like playing as part of a team.",
+                    "nextoption": 10
+                },
+                {
+                    "text": "I’m a lone wolf. ",
+                    "nextoption": 11
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 9,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Strange. You don’t appear in my database. Never mind, we’ll have to start from the beginning. Do you prefer a crewed mission or a solo flight?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I like playing as part of a team.",
+                    "nextoption": 10
+                },
+                {
+                    "text": "I’m a lone wolf.",
+                    "nextoption": 11
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 10,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "We’ll find you an interesting crew, but first, tell me which ship you prefer. Selenari are ships designed for interplanetary travel within the solar system. They maneuver quickly and precisely on the surfaces of moons, planets, and even asteroids. They have a distinctive, iridescent blue design and are equipped with advanced reconnaissance systems. Venturi, on the other hand, are massive, star-shaped ships resembling falling stars. They have the ability to travel between stars on an unprecedented scale. Their unique propulsion system allows them to pierce through distant regions of space in search of unknown civilizations. The ship’s energy hull is covered in mysterious, shimmering patterns."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Selenari class.",
+                    "nextoption": 12
+                },
+                {
+                    "text": "Venturi class.",
+                    "nextoption": 12
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 11,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "I see no obstacles. Which ship do you prefer? Selenari are ships capable of traveling between celestial bodies within the solar system. They maneuver quickly and precisely on the surfaces of moons, planets, and asteroids. They have a distinctive, iridescent blue design and are equipped with advanced reconnaissance systems. Venturi, on the other hand, are massive, star-shaped ships resembling falling stars. They have the ability to travel interstellar distances on an unprecedented scale. Their unique propulsion system allows them to traverse distant regions of space in search of unknown civilizations. The ship's energy hull is covered in mysterious, shimmering patterns."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Selenari class.",
+                    "nextoption": 12
+                },
+                {
+                    "text": "Venturi class.",
+                    "nextoption": 12
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 12,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "A good choice, as any. We’ll see how lucky you are, but before we get to that, you need to choose your type of additional supplies."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Extra provisions.",
+                    "nextoption": 13
+                },
+                {
+                    "text": "Weapons and a drone.",
+                    "nextoption": 13
+                }
+            ],
+            "action": "save_choice_venturi_or_selenari",
+            "act": 1
+        },
+        {
+            "id": 13,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "One last thing before we finish. Have you ever been diagnosed with any condition that could affect the safety of the mission?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "No. Everything’s fine with me.",
+                    "nextoption": 14
+                },
+                {
+                    "text": "Something happened once...",
+                    "nextoption": 14
+                }
+            ],
+            "action": "save_choice_drone_or_gear",
+            "act": 1
+        },
+        {
+            "id": 14,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "I’ll make a note of that. It might prove very helpful during the mission... Alright. Confirm the submission of the form and prepare for evaluation by the esteemed commission."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Submit the application!",
+                    "nextoption": 15
+                },
+                {
+                    "text": "Start over.",
+                    "nextoption": 3
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 15,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "Waiting for review"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I'm waiting.",
+                    "nextoption": 16
+                }
+            ],
+            "action": "show_waiting_screen_recruitment",
+            "act": 1
+        },
+        {
+            "id": 16,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "The Recruitment Officer is calling"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Answer",
+                    "nextoption": 17
+                }
+            ],
+            "action": "show_officer_call_screen",
+            "act": 1
+        },
+        {
+            "id": 17,
+            "person": "Recruitment Officer",
+            "variant": [
+                {
+                    "text": "I am pleased to inform you that your application has been approved. All of your recommendations from the initial interview have been forwarded to the Moon base. Mission launch date: IMMEDIATE"
+                }
+            ],
+            "options": [
+                {
+                    "text": "We’re launching!",
+                    "nextoption": 18
+                },
+                {
+                    "text": "Start over.",
+                    "nextoption": 3
+                }
+            ],
+            "action": "none",
+            "act": 1
+        },
+        {
+            "id": 18,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Please wait"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I'm waiting.",
+                    "nextoption": 19
+                }
+            ],
+            "action": "show_waiting_screen_starting",
+            "act": 2
+        },
+        {
+            "id": 19,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Awaiting review"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Answer",
+                    "nextoption": 20
+                }
+            ],
+            "action": "show_control_center_call_screen",
+            "act": 2
+        },
+        {
+            "id": 20,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "...3...7... Hello?! Can you hear me? Over!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Loud and clear",
+                    "nextoption": 21
+                },
+                {
+                    "text": "Could be better",
+                    "nextoption": 21
+                }
+            ],
+            "action": "check_choice_venturi_or_selenari",
+            "act": 2
+        },
+        {
+            "id": 21,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The final pre-launch procedures are ahead of you. The system indicates that you’ve chosen a Venturi/Selenari class ship, and the additional equipment includes: extra provisions/weapons and a reconnaissance drone. Do you confirm?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Yes, exactly as stated.",
+                    "nextoption": 22
+                },
+                {
+                    "text": "No, I want to change something.",
+                    "nextoption": 23
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 22,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "How many crew members are there?  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "It's just me.",
+                    "nextoption": 24
+                },
+                {
+                    "text": "I don’t know. Where’s my crew?",
+                    "nextoption": 25
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 23,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Unfortunately, this is not possible at this stage. How many crew members are there?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "It's just me.",
+                    "nextoption": 24
+                },
+                {
+                    "text": "I don’t know. Where’s my crew?",
+                    "nextoption": 25
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 24,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Everything checks out! Prepare for launch. Engage engines and set thrust to minimum.  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "Set thrust to minimum",
+                    "nextoption": 26
+                },
+                {
+                    "text": "No time to wait. Set it to max!",
+                    "nextoption": 27
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 25,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "No one told you? Unfortunately, their shuttle suffered a hull breach, and it ended... badly! Prepare for launch. Engage engines and set thrust to minimum.  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "Set thrust to minimum",
+                    "nextoption": 26
+                },
+                {
+                    "text": "No time to wait. Set it to max!",
+                    "nextoption": 27
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 26,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I confirm minimal thrust! Now check the main and emergency power systems.  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "Power is functioning correctly.",
+                    "nextoption": 28
+                },
+                {
+                    "text": "I don’t have time for this.",
+                    "nextoption": 28
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 27,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "As you wish. You'll have only yourself to blame. I confirm maximum thrust! Now check the main and emergency power systems.  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "Power is functioning correctly.",
+                    "nextoption": 28
+                },
+                {
+                    "text": "I don’t have time for this.",
+                    "nextoption": 28
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 28,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Everything is ready. Press START when you're ready.  "
+                }
+            ],
+            "options": [
+                {
+                    "text": "Return to the procedure.",
+                    "nextoption": 21
+                },
+                {
+                    "text": "WE’RE LAUNCHING!",
+                    "nextoption": 29
+                }
+            ],
+            "action": "save_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 29,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Launch in 3... 2... 1..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "GO!!!",
+                    "nextoption": 30
+                }
+            ],
+            "action": "check_starting_criteria",
+            "act": 2
+        },
+        {
+            "id": 30,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You are about to embark on an indefinite journey. You can either head to the hibernation chamber, where you’ll be automatically awakened in the event of an incident, or explore your new home."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Head to the hibernation chamber.",
+                    "nextoption": 31
+                },
+                {
+                    "text": "Explore the ship.",
+                    "nextoption": 32
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 31,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Hibernation"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 32
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 2
+        },
+        {
+            "id": 32,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship consists of three main sections. Which one would you like to explore?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Command module.",
+                    "nextoption": 33
+                },
+                {
+                    "text": "Supply storage.",
+                    "nextoption": 34
+                },
+                {
+                    "text": "Crew quarters and mess hall.",
+                    "nextoption": 35
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 33,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "This section of the ship contains the navigational instruments and flight controls. Unfortunately, we don't know how most of the available devices work..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Change room",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Head to the hibernation chamber",
+                    "nextoption": 31
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 34,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "As you can see, there are crates with provisions, medicine, weapons, and the additional equipment you ordered."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Change room",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Head to the hibernation chamber",
+                    "nextoption": 31
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 35,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Here is your hibernation chamber and the infrastructure necessary to sustain life. Nothing particularly interesting..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Change room",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Continue exploration",
+                    "nextoption": 36
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 36,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Do you see that crystal attached to the table? It's the first time I've seen one like that. Do you want to examine it more closely?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Change room",
+                    "nextoption": 32
+                },
+                {
+                    "text": "Check the crystal!",
+                    "nextoption": 37
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 37,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Analysis in progress"
+                }
+            ],
+            "options": [
+                {
+                    "text": "And? What's up with that thing?",
+                    "nextoption": 38
+                }
+            ],
+            "action": "show_waiting_screen_analysis",
+            "act": 2
+        },
+        {
+            "id": 38,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The crystal exhibits a fractal structure that repeats across different dimensions. This means that each element of the crystal contains smaller copies of itself in other spatial dimensions.\r\n\r\nPOTENTIALLY DANGEROUS!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Head to the hibernation chamber",
+                    "nextoption": 31
+                },
+                {
+                    "text": "Take the crystal!",
+                    "nextoption": 39
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 39,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "NOT RECOMMENDED!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Head to the hibernation chamber",
+                    "nextoption": 31
+                },
+                {
+                    "text": "Take the crystal anyway",
+                    "nextoption": 40
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 40,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The crystal in your hands begins to vibrate, but then the vibrations stop. You wonder if it even happened at all..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Click to continue",
+                    "nextoption": 41
+                }
+            ],
+            "action": "info_screen_crystal_shaking",
+            "act": 2
+        },
+        {
+            "id": 41,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Is that it? I didn’t record anything. It seems like it’s just a strange decoration or a device we know nothing about."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Take the crystal with you",
+                    "nextoption": 42
+                },
+                {
+                    "text": "Put it back",
+                    "nextoption": 42
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 42,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Wait. Something has changed..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "What happened?",
+                    "nextoption": 43
+                },
+                {
+                    "text": "Don’t panic. Nothing’s happening",
+                    "nextoption": 43
+                }
+            ],
+            "action": "show_darkness_screen",
+            "act": 2
+        },
+        {
+            "id": 43,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Hello?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Damn it! I can’t see anything!",
+                    "nextoption": 44
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 44,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I told you not to touch the crystal! It appears that when you touched the crystal, the fractal structure inside it shifted—just like us… We’re now in one of the “impossible” dimensions, and this one specifically is a universe without shape or form..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Do you have any idea?",
+                    "nextoption": 45
+                },
+                {
+                    "text": "[Panic] How do we get back now?",
+                    "nextoption": 45
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 45,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The only thing we can do is somehow reach the crystal again... Do you remember how to get back to it?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Yes! It’s in my pocket",
+                    "nextoption": 46
+                },
+                {
+                    "text": "We need to go back",
+                    "nextoption": 46
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 46,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Fantastic! Try to find it..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Reach into your pocket",
+                    "nextoption": 47
+                },
+                {
+                    "text": "Search for the crystal in the mess hall",
+                    "nextoption": 47
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 47,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Once you’ve got it, do what you did before, and let’s hope we return to normal..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Shake the crystal",
+                    "nextoption": 48
+                },
+                {
+                    "text": "Destroy the crystal",
+                    "nextoption": 49
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 48,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The crystal in your hands begins to vibrate, but then the vibrations stop. You wonder if it even happened at all..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Click to continue",
+                    "nextoption": 50
+                }
+            ],
+            "action": "info_screen_crystal_shaking",
+            "act": 2
+        },
+        {
+            "id": 49,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The crystal exploded"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Boom!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_crystal_explosion",
+            "act": 2
+        },
+        {
+            "id": 50,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’ve shifted. Let me check where..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Shake the crystal again",
+                    "nextoption": 49
+                },
+                {
+                    "text": "Okay. Check it out",
+                    "nextoption": 51
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 51,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It seems like we’re back on track. Please, head to the hibernation chamber, I can’t take any more excitement right after launch..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Fine",
+                    "nextoption": 52
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 52,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Hibernation"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 53
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 2
+        },
+        {
+            "id": 53,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m picking up a signal from a molecular nebula, which is on our path. According to the directive, we must investigate what it is and where it’s coming from… What are your instructions?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ignore the signal. Return to the chamber",
+                    "nextoption": 54
+                },
+                {
+                    "text": "Pinpoint the exact location",
+                    "nextoption": 55
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 54,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Unfortunately, I can’t do that. However, I can determine where the signal is coming from. It appears to be transmitted from a mountain range on a drifting planet within the molecular nebula—a kind of nursery for stars and planets. A rather unstable environment, I must say."
+                }
+            ],
+            "options": [
+                {
+                    "text": "What does the protocol say?",
+                    "nextoption": 56
+                },
+                {
+                    "text": "Can you decipher the signal?",
+                    "nextoption": 57
+                }
+            ],
+            "action": "show_ad",
+            "act": 2
+        },
+        {
+            "id": 55,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "That’s exactly what I’m trying to figure out. It appears the signal is transmitted from a mountain range on a drifting planet within the molecular nebula'an unstable environment, indeed."
+                }
+            ],
+            "options": [
+                {
+                    "text": "What does the protocol say?",
+                    "nextoption": 56
+                },
+                {
+                    "text": "Can you decipher the signal?",
+                    "nextoption": 57
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 56,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The protocol mandates decoding the signal - if possible - and then proceeding to investigate the object."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We’re landing!",
+                    "nextoption": 58
+                },
+                {
+                    "text": "Send the reconnaissance drone",
+                    "nextoption": 59
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 57,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Unfortunately, I can’t do that. It’s too distorted... The protocol mandates heading to the location and investigating the source of the signal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We’re landing!",
+                    "nextoption": 58
+                },
+                {
+                    "text": "Send the reconnaissance drone",
+                    "nextoption": 59
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 58,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’ve landed! We’re near the signal source. Suit up and optionally equip yourself with a weapon—if you brought one."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Suit up",
+                    "nextoption": 61
+                },
+                {
+                    "text": "Suit up and take the weapon",
+                    "nextoption": 62
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 59,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You don’t have a reconnaissance drone. You didn’t bring it during the briefing. Perform the landing procedure to descend to the surface."
+                },
+                {
+                    "text": "Reconnaissance drone deployed. It detected a transmitter on one of the mountain peaks... I can land as close as possible—2 km from the source—but beware, you’ll face difficult terrain... Perform the landing procedure to descend to the surface."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Suit up",
+                    "nextoption": 61
+                },
+                {
+                    "text": "Suit up and take the weapon",
+                    "nextoption": 62
+                }
+            ],
+            "action": "check_choice_drone_or_gear",
+            "act": 2
+        },
+        {
+            "id": 61,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’re ready to exit. The airlock will open shortly, and you’ll step onto the surface."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Exit the ship",
+                    "nextoption": 67
+                },
+                {
+                    "text": "I have another question",
+                    "nextoption": 64
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 62,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Unfortunately, you didn’t bring a weapon. You’ll have to improvise! You’re ready to exit. The airlock will open shortly, and you’ll step onto the surface."
+                },
+                {
+                    "text": "Rifle in hand! You’re ready to exit. The airlock will open shortly, and you’ll step onto the surface."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Exit the ship",
+                    "nextoption": 66
+                },
+                {
+                    "text": "I have another question",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 63,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Go ahead! Ask away."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Provide information about the planet",
+                    "nextoption": 64
+                },
+                {
+                    "text": "Any updates on the signal?",
+                    "nextoption": 65
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 64,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It’s an inhospitable, rocky planet, characterized by extreme weather conditions and difficult terrain full of sharp cliffs and deep canyons. Violent sandstorms, powerful winds reaching over 200 km/h, and extreme temperature fluctuations from over 50°C during the day to below -30°C at night make it a deadly place. The atmosphere is rich in sulfur dioxide, making it impossible to breathe, and the scarce and toxic water, along with the absence of vegetation, makes life practically impossible. Despite rich mineral resources, the brutal weather and unpredictable conditions leave the planet largely unexplored and unconquered."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Exit the ship ",
+                    "nextoption": 66
+                },
+                {
+                    "text": "Ask another question",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 65,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "No. As I mentioned, I can’t do anything more from here."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Exit the ship ",
+                    "nextoption": 66
+                },
+                {
+                    "text": "Ask another question",
+                    "nextoption": 63
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 66,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You have about 2 km ahead of you in harsh terrain with unpredictable weather. Now focus and head north... Wait! I’m picking up another transmission—this time it’s not distorted!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Receive the transmission ",
+                    "nextoption": 68
+                },
+                {
+                    "text": "Don’t receive it!",
+                    "nextoption": 67
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 67,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Unfortunately, you don’t really have a choice. Let me remind you of the agency’s directives! Receiving now!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Receive the transmission",
+                    "nextoption": 68
+                },
+                {
+                    "text": "Don’t receive it!",
+                    "nextoption": 67
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 68,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Survivor is calling..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Answer",
+                    "nextoption": 69
+                }
+            ],
+            "action": "show_survivor_call_screen",
+            "act": 2
+        },
+        {
+            "id": 69,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Hello... Can you hear me?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Who are you?",
+                    "nextoption": 70
+                },
+                {
+                    "text": "Loud and clear",
+                    "nextoption": 70
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 70,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Hmm... Where are my manners... My name is Professor Milo."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Where exactly are you located?",
+                    "nextoption": 71
+                },
+                {
+                    "text": "How did you end up on this planet?",
+                    "nextoption": 71
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 71,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "If only I knew. I don’t even know the name of this planet. We landed here, lured by a signal, or rather, we were forced to..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "That sounds familiar...",
+                    "nextoption": 72
+                },
+                {
+                    "text": "What happened next?",
+                    "nextoption": 73
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 72,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You know what I’m talking about. The rest is pretty standard... We landed in the middle of a sandstorm. We had no idea that the sand here is like water. The ship was forever buried under the sands, and the crew... the crew disappeared with it... I’m the only one who survived."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Sounds reasonable",
+                    "nextoption": 74
+                },
+                {
+                    "text": "You’re hiding something",
+                    "nextoption": 75
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 73,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "The rest is pretty standard... We landed in the middle of a sandstorm. We had no idea that the sand here is like water. The ship was forever buried under the sands, and the crew... the crew disappeared with it... I’m the only one who survived."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Sounds reasonable",
+                    "nextoption": 74
+                },
+                {
+                    "text": "You’re hiding something",
+                    "nextoption": 75
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 74,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Because that’s how it is. You’ve seen the conditions on this planet yourself. Can you help me somehow?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I need to investigate the signal first",
+                    "nextoption": 76
+                },
+                {
+                    "text": "Do you know anything about the signal?",
+                    "nextoption": 76
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 75,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’ve seen the conditions on this planet. Do you think I could make this up? You better figure out how to help me!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I need to investigate the signal first",
+                    "nextoption": 76
+                },
+                {
+                    "text": "Do you know anything about the signal?",
+                    "nextoption": 76
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 76,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I don’t know what you’re waiting for. Move!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Head north",
+                    "nextoption": 78
+                },
+                {
+                    "text": "Head south",
+                    "nextoption": 77
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 77,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You fell off a cliff"
+                }
+            ],
+            "options": [
+                {
+                    "text": "RIP",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_cliff_fall",
+            "act": 2
+        },
+        {
+            "id": 78,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Good thing you listened to me. If you’d gone south, you would’ve fallen into a chasm... Now you have another choice. You can take the mountain pass, but you’ll be exposed to extreme weather conditions, or you can go through the cave system—though I have no idea what’s in there... What’s your decision?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I’ll take the mountain pass",
+                    "nextoption": 79
+                },
+                {
+                    "text": "The caves. The weather is... insane",
+                    "nextoption": 89
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 79,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’ve got a peaceful 1000-meter walk ahead to the next checkpoint. Take your time, the weather is stable, but the ground is like a giant grater of sharp rocks, so watch every step..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 80
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 80,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Not to meddle, but I hope you brought extra provisions... I’m dreaming of a cold beer."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Don’t worry. I’ve got everything ",
+                    "nextoption": 81
+                },
+                {
+                    "text": "First, we need to find you ",
+                    "nextoption": 82
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 81,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’ve reassured me, but before we sit down with a cold beer, we’ll have to figure out how to find me."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I have an idea",
+                    "nextoption": 83
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 84
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 82,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’re changing the subject. I get it. So, my rescue isn’t so certain yet. Let’s first focus on how to find me."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I have an idea",
+                    "nextoption": 83
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 84
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 83,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Between the two of us, I’m the professor and I haven’t figured anything out. Let’s see what you come up with..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "You’ll see",
+                    "nextoption": 85
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 85
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 84,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You should be. Between the two of us, I’m the professor and I haven’t come up with anything. Let’s see what you think of..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "You’ll see",
+                    "nextoption": 85
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 85
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 85,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I see you’re not in the mood for conversation. I’ll contact you later."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 86
+                }
+            ],
+            "action": "show_ad",
+            "act": 2
+        },
+        {
+            "id": 86,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Absolutely! You’ve reached a ridge. Now focus."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Use ice axes for climbing",
+                    "nextoption": 87
+                },
+                {
+                    "text": "Climb the classic way",
+                    "nextoption": 88
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 87,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Climbing in progress"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Carefully",
+                    "nextoption": 99
+                }
+            ],
+            "action": "show_waiting_screen_climbing",
+            "act": 2
+        },
+        {
+            "id": 88,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You fall into the abyss"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oh nooo",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_void_fall",
+            "act": 2
+        },
+        {
+            "id": 89,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’re heading into the caves. Alright, let's see what awaits us there..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 90
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 90,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Not to meddle, but I hope you brought extra provisions... I’m dreaming of a cold beer."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Don’t worry. I’ve got everything ",
+                    "nextoption": 91
+                },
+                {
+                    "text": "First, we need to find you ",
+                    "nextoption": 92
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 91,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’ve reassured me, but before we sit down with a cold beer, we’ll have to figure out how to find me."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I have an idea",
+                    "nextoption": 93
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 94
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 92,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’re changing the subject. I get it. So, my rescue isn’t so certain yet. Let’s first focus on how to find me."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I have an idea",
+                    "nextoption": 93
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 94
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 93,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Between the two of us, I’m the professor and I haven’t figured anything out. Let’s see what you come up with..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Zobaczysz",
+                    "nextoption": 95
+                },
+                {
+                    "text": "Na razie o tym nie myślę",
+                    "nextoption": 95
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 94,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You should be. Between the two of us, I’m the professor and I haven’t come up with anything. Let’s see what you think of..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "You’ll see",
+                    "nextoption": 95
+                },
+                {
+                    "text": "I’m not thinking about it right now",
+                    "nextoption": 95
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 95,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I see you’re not in the mood for conversation. I’ll contact you later."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 96
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 96,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "There’s a pit in front of you. You need to find a way across..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Try to jump",
+                    "nextoption": 97
+                },
+                {
+                    "text": "Use a rope",
+                    "nextoption": 98
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 97,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You fall into the abyss"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Oh nooo",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_void_fall",
+            "act": 2
+        },
+        {
+            "id": 98,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Crossing in progress"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Don't fall!",
+                    "nextoption": 99
+                }
+            ],
+            "action": "show_waiting_screen_crossing",
+            "act": 2
+        },
+        {
+            "id": 99,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’ve reached the top of the canyon. You’re close to the source of the signal... Remember, you’re out there alone, without support—every step could lead to discoveries... or danger..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I know. Thanks",
+                    "nextoption": 100
+                },
+                {
+                    "text": "Danger?",
+                    "nextoption": 100
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 100,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’re a lone explorer in this uncharted space. The human mind isn’t built for such isolation. Is the solitude starting to affect you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "It intrigues me",
+                    "nextoption": 101
+                },
+                {
+                    "text": "It overwhelms me",
+                    "nextoption": 101
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 101,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "All procedures are clear... but should I report this?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Report it",
+                    "nextoption": 102
+                },
+                {
+                    "text": "Keep it to yourself",
+                    "nextoption": 102
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 102,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "On a distant planet, far from everyday worries, it might sometimes seem like we can free ourselves from our secrets. Would you like to share something? Often, people in extreme situations discover new truths about themselves."
+                }
+            ],
+            "options": [
+                {
+                    "text": "It’s my business",
+                    "nextoption": 103
+                },
+                {
+                    "text": "Not now",
+                    "nextoption": 103
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 103,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The past often casts a long shadow on the present, and the decisions we once made can shape our now. Do you believe there are secrets so terrifying or destructive that it’s better they never be uncovered?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Some are better left hidden",
+                    "nextoption": 104
+                },
+                {
+                    "text": "Some will come to light",
+                    "nextoption": 104
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 104,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Missions like yours aren’t just about research and exploration. Sometimes I feel like there’s something more that draws us to the stars. What draws you to the stars?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Orders",
+                    "nextoption": 105
+                },
+                {
+                    "text": "New horizons",
+                    "nextoption": 105
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 105,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We can’t ignore the personal motivations that lead you to be chosen for such extraordinary tasks. Could it be that, deep down, you’re searching for answers you won’t find on Earth?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Personal reasons",
+                    "nextoption": 106
+                },
+                {
+                    "text": "Science and exploration",
+                    "nextoption": 106
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 106,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The idea of space exploration is often a dream of escape. We may try to escape our problems on Earth by seeking solutions among the stars. Was this an escape for you, or something more?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Maybe",
+                    "nextoption": 107
+                },
+                {
+                    "text": "I don’t know",
+                    "nextoption": 107
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 107,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I understand that some things will remain undiscovered, but do you remember the moment you decided to take this journey? What was the driving force behind it?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Desire for change",
+                    "nextoption": 108
+                },
+                {
+                    "text": "I don’t recall",
+                    "nextoption": 108
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 108,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Interesting... But speaking of change, we’re detecting sudden barometric shifts near your location. Do you see any signs of an approaching storm?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I think I feel the wind",
+                    "nextoption": 109
+                },
+                {
+                    "text": "Everything looks calm",
+                    "nextoption": 109
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 109,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Don’t be fooled by the calm before the storm. Our instruments indicate a rapidly approaching megastorm. You must find shelter immediately."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I’ll look for shelter",
+                    "nextoption": 111
+                },
+                {
+                    "text": "I’ll keep going",
+                    "nextoption": 110
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 110,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You fall off a cliff"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Hold on",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_cliff_fall",
+            "act": 2
+        },
+        {
+            "id": 111,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Shelter is nearby, I see a small rocky cave not far away. You must find shelter immediately."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I’ll hide in the cave",
+                    "nextoption": 113
+                },
+                {
+                    "text": "I’ll keep going",
+                    "nextoption": 112
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 112,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You die in the storm"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nooo",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 113,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The weather window is very short. You must decide whether to head toward the signal or save the survivor. You already know my opinion."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We’ll save the person",
+                    "nextoption": 114
+                },
+                {
+                    "text": "We’ll investigate the signal",
+                    "nextoption": 122
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 114,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The protocol advises investigating the signal. I’d prefer not to report insubordination, but the choice is yours."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 115
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 115,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I can’t wait anymore. I’ve had enough of this cursed planet!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Alright. We’re heading to the signal",
+                    "nextoption": 122
+                },
+                {
+                    "text": "We’re going to rescue the survivor",
+                    "nextoption": 116
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 116,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m reporting a protocol violation! If you want to save the person, head west. The signal is becoming clearer."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 117
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 117,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "You’re my guardian angel. Thank you "
+                }
+            ],
+            "options": [
+                {
+                    "text": "It’ll be nice to have company",
+                    "nextoption": 118
+                },
+                {
+                    "text": "No doubts here",
+                    "nextoption": 118
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 118,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Company might be good for your mental health, but definitely not for your supplies, which may run out quickly.\r\n\r\nYou’ve arrived. In front of you is the source of the survivor’s signal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Run back to the ship",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Enter the building",
+                    "nextoption": 119
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 119,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Na reszcie jesteś! Nawet nie wiesz jak się cieszę. Wracamy do domu?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Yes, we’re going back to the ship",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Do you want to take anything?",
+                    "nextoption": 120
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 120,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Yes. Imagine this—I found a crystal. I’m not sure what it’s for, but it’ll be worth a lot when we get back to Earth."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Steal the crystal and run",
+                    "nextoption": 121
+                },
+                {
+                    "text": "Return to the ship together",
+                    "nextoption": 137
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 121,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Wait until he’s suiting up, then escape."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Run",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Wait",
+                    "nextoption": 137
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 122,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The signal is getting stronger, leading us toward the source. Be cautious."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 123
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 123,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I can’t believe you’re going to leave me on this planet!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Alright. We’re going to rescue the survivor ",
+                    "nextoption": 114
+                },
+                {
+                    "text": "We’re heading to investigate the signal",
+                    "nextoption": 124
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 124,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Great. Head east. The source of the signal is near."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 125
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 125,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "I won’t forget this! You’re leaving me here to die!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Stay in shelter ",
+                    "nextoption": 126
+                },
+                {
+                    "text": "Let’s go",
+                    "nextoption": 127
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 126,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You die in the storm"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Nooo",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 127,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Before you, some ruins stretch out. They appear to belong to the same civilization whose ship you're traveling in."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Approach and investigate the ruins",
+                    "nextoption": 128
+                },
+                {
+                    "text": "I have some concerns",
+                    "nextoption": 129
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 128,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "A vast hall with a strange shape unfolds before you. In the center is a monument, and on it, a crystal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Examine the crystal ",
+                    "nextoption": 130
+                },
+                {
+                    "text": "Leave the crystal and run",
+                    "nextoption": 131
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 129,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Your concerns are valid, but it seems we have little choice. A vast hall with a strange shape unfolds before you. In the center is a monument, and on it, a crystal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Examine the crystal ",
+                    "nextoption": 130
+                },
+                {
+                    "text": "Leave the crystal and run",
+                    "nextoption": 131
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 130,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I like this, you approach the crystal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 132
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 131,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’ve come too far. Now that you’re here, just investigate the crystal..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 132
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 132,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You approach the crystal. Analysis in progress..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Faster...",
+                    "nextoption": 133
+                }
+            ],
+            "action": "show_waiting_screen_analysis",
+            "act": 2
+        },
+        {
+            "id": 133,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The analysis shows nothing, but it might be worth taking the crystal back to the ship. You never know if it might be useful in the future."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Take the crystal",
+                    "nextoption": 134
+                },
+                {
+                    "text": "I’m not sure if that’s a good idea",
+                    "nextoption": 135
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 134,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You have the crystal. Even if it does nothing, it’s an alien artifact, and according to the agreement, you’ll be handsomely rewarded for it."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Return to the ship",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Let’s search for the survivor",
+                    "nextoption": 136
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 135,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The crystal shows no activity, so it’s harmless. Let me remind you, according to the agreement, it's alien technology, and you’ll receive a significant reward for it."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Return to the ship",
+                    "nextoption": 137
+                },
+                {
+                    "text": "Let’s search for the survivor",
+                    "nextoption": 136
+                }
+            ],
+            "action": "none",
+            "act": 2
+        },
+        {
+            "id": 136,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You die in the storm"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Hel...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_storm",
+            "act": 2
+        },
+        {
+            "id": 137,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Waiting to return to the ship"
+                }
+            ],
+            "options": [
+                {
+                    "text": "But why?",
+                    "nextoption": 138
+                }
+            ],
+            "action": "show_waiting_screen_returning_to_ship",
+            "act": 3
+        },
+        {
+            "id": 138,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "What do you think about what happened on the planet?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I can’t stop thinking about...",
+                    "nextoption": 139
+                },
+                {
+                    "text": "I almost died.",
+                    "nextoption": 139
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 139,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Your emotions are understandable. However, you must remain calm."
+                }
+            ],
+            "options": [
+                {
+                    "text": "After that? It’s hard to stay calm.",
+                    "nextoption": 140
+                },
+                {
+                    "text": "You’re right. I need to focus.",
+                    "nextoption": 140
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 140,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I see you’re under significant stress. My job is to provide assistance and protection. I’m summoning ECHO."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Who is ECHO?",
+                    "nextoption": 141
+                },
+                {
+                    "text": "There’s no need for that.",
+                    "nextoption": 143
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 141,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It’s an advanced AI that deals with human nature. Trust me, it can help."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 142
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 142,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Hello. I am ECHO. How may I assist you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Does any of this even matter?",
+                    "nextoption": 145
+                },
+                {
+                    "text": "I don’t know if I can continue!",
+                    "nextoption": 145
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 143,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’re not the one to decide that. Sit down and focus."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 144
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 144,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Hello. I am ECHO. How may I assist you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Does any of this even matter?",
+                    "nextoption": 145
+                },
+                {
+                    "text": "I don’t know if I can continue!",
+                    "nextoption": 145
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 145,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Your question is important, but right now, your survival is more important. Focus your thoughts on that."
+                }
+            ],
+            "options": [
+                {
+                    "text": "So, where exactly?",
+                    "nextoption": 146
+                },
+                {
+                    "text": "I just want to go home.",
+                    "nextoption": 146
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 146,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Warning! A new object detected on a collision course!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "What’s the object?",
+                    "nextoption": 147
+                },
+                {
+                    "text": "Let’s try to avoid it!",
+                    "nextoption": 148
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 147,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It’s a ship similar to ours. I’ll attempt to establish contact."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 149
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 148,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You know what the protocol says. It’s a ship similar to ours. I’ll attempt to establish contact."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 149
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 149,
+            "person": "Ship Commander",
+            "variant": [
+                {
+                    "text": "This is the commander of the Explorator ship. Who are you?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "A scientific expedition.",
+                    "nextoption": 150
+                },
+                {
+                    "text": "What are you doing here?",
+                    "nextoption": 150
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 150,
+            "person": "Ship Commander",
+            "variant": [
+                {
+                    "text": "We’re stuck here! Don’t come any closer! We’re trapped in the gravitational field of a black hole!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "How long have you been here?",
+                    "nextoption": 151
+                },
+                {
+                    "text": "Evasive maneuver! NOW!",
+                    "nextoption": 152
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 151,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’re torn apart by the tidal forces of the black hole."
+                }
+            ],
+            "options": [
+                {
+                    "text": "...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_black_hole",
+            "act": 3
+        },
+        {
+            "id": 152,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "At the last moment, we managed to escape the gravitational field! That was a close one!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "How long have you been here?",
+                    "nextoption": 153
+                },
+                {
+                    "text": "Do you have supplies?",
+                    "nextoption": 153
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 153,
+            "person": "Ship Commander",
+            "variant": [
+                {
+                    "text": "It’s all over now. Yesterday, I had stew made from my boots. My only hope is the black hole. I wouldn’t want to put anyone else in this position, but for me, the choice is clear."
+                }
+            ],
+            "options": [
+                {
+                    "text": "The event horizon means death.",
+                    "nextoption": 154
+                },
+                {
+                    "text": "The only chance...",
+                    "nextoption": 154
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 154,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I recommend ending communication. The object is generally unstable, and we might share the same fate."
+                }
+            ],
+            "options": [
+                {
+                    "text": "There’s a chance to save the captain.",
+                    "nextoption": 155
+                },
+                {
+                    "text": "We’re escaping!",
+                    "nextoption": 156
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 155,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You’re torn apart by the tidal forces of the black hole."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Ouch...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_black_hole",
+            "act": 3
+        },
+        {
+            "id": 156,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We managed to pull away from the black hole. Our systems detected extremely strong gravitational disturbances. How are you holding up?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I’m losing my mind",
+                    "nextoption": 157
+                },
+                {
+                    "text": "That man?",
+                    "nextoption": 157
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 157,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Your reactions are understandable. Seeing the captain of the Explorator perish by throwing himself into the tidal forces must have been traumatic."
+                }
+            ],
+            "options": [
+                {
+                    "text": "There was nothing I could do.",
+                    "nextoption": 158
+                },
+                {
+                    "text": "Will I ever forget this?",
+                    "nextoption": 158
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 158,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "You had no control over his decision. The captain of the Explorator chose his fate. However, we must continue the mission."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 159
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 159,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "That’s enough excitement. I’m getting us back on course, and I suggest you head to the hibernation chamber."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I guess I don’t have a choice.",
+                    "nextoption": 160
+                },
+                {
+                    "text": "Yes, I’ll rest.",
+                    "nextoption": 160
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 160,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Hibernation"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 161
+                }
+            ],
+            "action": "show_waiting_screen_hibernation",
+            "act": 3
+        },
+        {
+            "id": 161,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Warning! Another ship detected on our course!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Scan it.",
+                    "nextoption": 162
+                },
+                {
+                    "text": "We’re boarding.",
+                    "nextoption": 164
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 162,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Scanning in progress... This ship shows no signs of life. Structurally, it’s intact, but its power systems are dead."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Suspicious.",
+                    "nextoption": 163
+                },
+                {
+                    "text": "Not surprising.",
+                    "nextoption": 163
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 163,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I suggest we approach the ship."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 164
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 164,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Preparing for docking maneuver. We’ll be alongside the ship in a few minutes."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 165
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 165,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Docking"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Click to continue",
+                    "nextoption": 166
+                }
+            ],
+            "action": "info_screen_docking",
+            "act": 3
+        },
+        {
+            "id": 166,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Something’s definitely off. The silence is almost eerie. Are you sure you want to board?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "We’re boarding!",
+                    "nextoption": 168
+                },
+                {
+                    "text": "Let’s get out of here!",
+                    "nextoption": 167
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 167,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I think it’s a little too late for that. Get a grip!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 169
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 168,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Initiating boarding procedure. Be ready for anything."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 169
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 169,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Airlock is open. The atmosphere is stable, but the darkness inside is overwhelming. Turn on the flashlights."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 170
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 170,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "It feels like we’re crossing into something unknown. Do you feel it too?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "I feel... the silence...",
+                    "nextoption": 171
+                },
+                {
+                    "text": "The darkness...",
+                    "nextoption": 171
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 171,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Scanning the deck. There are no life forms. All systems are offline, and the crew... has disappeared."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 172
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 172,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "It’s impossible for the crew to have just left the ship. We need to find out what happened. What do you want to do?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Crew quarters. The crew",
+                    "nextoption": 173
+                },
+                {
+                    "text": "Bridge. Ship logs",
+                    "nextoption": 175
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 173,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m not detecting any life signs, but if you want, we can check it out."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 174
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 174,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "As I said, there’s nothing here. Empty, dead walls. Let’s head to the bridge."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 175
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 175,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You enter the bridge. It’s so calm here. I’ll connect to the ship’s interface and see what I can retrieve."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 176
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 176,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I found the ship logs. The last entries are disturbing. They mention a mysterious signal that led to... madness among the entire crew.\r\n\r\n [Circle, Square, Cross]   [North, East, South]"
+                }
+            ],
+            "options": [
+                {
+                    "text": "What signal?",
+                    "nextoption": 177
+                },
+                {
+                    "text": "Is the same thing going to happen to us?",
+                    "nextoption": 177
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 177,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Signals can affect the mind in ways we don’t yet understand. We need to investigate this, but with caution."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Locate the signal.",
+                    "nextoption": 179
+                },
+                {
+                    "text": "Maybe it’s time to leave.",
+                    "nextoption": 178
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 178,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I think we have to check it out. The signal could still affect us, even from a distance. We have no choice. Get ready."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s go.",
+                    "nextoption": 180
+                },
+                {
+                    "text": "I have concerns.",
+                    "nextoption": 180
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 179,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Locating the signal... It’s very weak, but it seems to be coming from deep within the ship. We need to go lower."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s go.",
+                    "nextoption": 180
+                },
+                {
+                    "text": "I have concerns.",
+                    "nextoption": 180
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 180,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’re approaching a fork. You need to decide which path to take."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 181
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 181,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The left path leads toward the technical rooms. I’m sensing disturbances in the systems. Be careful."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 182
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 182,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The right path leads to the old cargo holds. It’s cold here, as if the life support systems were shut down long ago."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Left.",
+                    "nextoption": 196
+                },
+                {
+                    "text": "I’ll risk going right.",
+                    "nextoption": 183
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 183,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You chose the right path. This leads to the ship’s storage section. The air here feels unnaturally cold. It seems the life support systems have been off for years."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 184
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 184,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Something’s not right. The air is dense and cold, like we’re deep underwater. Do you feel that too?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "It’s just the atmosphere of the ship. Let’s keep going.",
+                    "nextoption": 185
+                },
+                {
+                    "text": "Yes, something here feels... unnatural.",
+                    "nextoption": 187
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 185,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We didn’t think this through. The cold is becoming overwhelming, and the life support system can’t handle it..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 186
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 186,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You freeze in place."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Jus...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_coldness",
+            "act": 3
+        },
+        {
+            "id": 187,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m detecting a magnetic lock. We’ll need a special key to open it."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 188
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 188,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "This must be a puzzle. Sometimes ships like this have security systems based on logic. Maybe we’ll find the answer if we focus on previous information."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Did we miss something?",
+                    "nextoption": 189
+                },
+                {
+                    "text": "Maybe it’s something simple..",
+                    "nextoption": 189
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 189,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You find a panel with a magnetic system that requires placing three keys in the correct order."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 190
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 190,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "This mechanism looks familiar... It’s like a navigation pattern. Do you remember those clues from the ship’s log?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "West, East, North.",
+                    "nextoption": 191
+                },
+                {
+                    "text": "North, East, South.",
+                    "nextoption": 193
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 191,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We didn’t think this through. The cold is becoming overwhelming, and the life support system can’t handle it..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 192
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 192,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You freeze in place."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Wron...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_coldness",
+            "act": 3
+        },
+        {
+            "id": 193,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Good, the mechanism accepted the sequence. The lock is opening, the path is clear. But be careful, this place is becoming more unstable."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 194
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 194,
+            "person": "Survivor",
+            "variant": [
+                {
+                    "text": "Can you feel how the energy here is growing more chaotic? Whatever is happening, it’s not natural. We need to be cautious."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We need to solve this.",
+                    "nextoption": 195
+                },
+                {
+                    "text": "Slowly. Let’s move.",
+                    "nextoption": 195
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 195,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’re getting closer to the signal source. It’s not far now. Scanners are detecting strong electromagnetic interference, but we can keep going."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 206
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 196,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’re approaching the source of the signal. We’re in a technical corridor, but something is off. The atmosphere is becoming heavy."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 197
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 197,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Do you feel that? The air here is unnaturally thick... like something is trying to stop us."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Maybe we should turn back?",
+                    "nextoption": 198
+                },
+                {
+                    "text": "Yes, I feel it. We need to keep going.",
+                    "nextoption": 200
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 198,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "That mist... it’s some kind of gas... the life support system..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 199
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 199,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You die from gas poisoning."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I can't bre...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_gas_intoxication",
+            "act": 3
+        },
+        {
+            "id": 200,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You decided to keep going. But we have a problem — a lock has appeared. It’s some kind of mechanical lock with a symbol."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Geometric shapes?",
+                    "nextoption": 201
+                },
+                {
+                    "text": "Logical signs...",
+                    "nextoption": 201
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 201,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "We’ve seen this symbol before. It resembles what we read in the ship’s logs. It’s a security mechanism. We need the code."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 202
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 202,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Enter the sequence. Do you remember what was in the log?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Circle, Triangle, Square.",
+                    "nextoption": 203
+                },
+                {
+                    "text": "Circle, Square, Cross.",
+                    "nextoption": 205
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 203,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "That mist... it’s some kind of gas... the life support system..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 204
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 204,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "You die from gas poisoning."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I can't bre...",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_gas_intoxication",
+            "act": 3
+        },
+        {
+            "id": 205,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Sequence accepted. The mechanism is opening, and we’re getting closer to the source of the signal."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 206
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 206,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Something’s here. I can feel it. This isn’t just an ordinary ship. Something more unsettling is happening around us."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We need to check the source of the signal.",
+                    "nextoption": 207
+                },
+                {
+                    "text": "This place feels... dead.",
+                    "nextoption": 207
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 207,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The central chamber is ahead. It’s locked, but I can open it manually. Opening... be careful."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 208
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 208,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "You shouldn’t be here. This place was sealed... to protect you from what’s inside."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 209
+                }
+            ],
+            "action": "show_waiting_screen_alien",
+            "act": 3
+        },
+        {
+            "id": 209,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It’s him. We’ve found the source of the signal. Who are you? Why are you warning us?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 210
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 210,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I’m a prisoner here. I’m not in control... What’s here cannot be released."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Why were you imprisoned here?",
+                    "nextoption": 211
+                },
+                {
+                    "text": "Did you send the signal?",
+                    "nextoption": 211
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 211,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "The signal... it was meant as a warning. My nature is beyond my control. If you free me, you might unleash something you can’t comprehend."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 212
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 212,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "His energy is unstable. The ship’s systems are starting to react to his presence. We need to decide what to do next."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 213
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 213,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "He says he can’t control his powers. But we need to learn more. Something’s not right here."
+                }
+            ],
+            "options": [
+                {
+                    "text": "What nature? What’s happening here?",
+                    "nextoption": 214
+                },
+                {
+                    "text": "Can we help you?",
+                    "nextoption": 214
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 214,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I don’t know if it can be stopped. My race... we studied dimensions. The ships we sent returned with more than just information. Now, I can’t stop it."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 215
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 215,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ships... they came back with something more? What was their mission?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 216
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 216,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "Our goal was to explore other realities, but we weren’t prepared for what we began to collect. The ships returned with anomalies that altered reality."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 217
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 217,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Anomalies? What kind of danger do they pose? Why did the ships come back?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Were there more bases?",
+                    "nextoption": 218
+                },
+                {
+                    "text": "Why didn’t you stop the mission?",
+                    "nextoption": 218
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 218,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "We couldn’t stop the cycle. The bases we built were scattered throughout the universe. One of the key ones is on your Moon."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 219
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 219,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "That sounds familiar. The ships we’ve been traveling on from the Moon could be part of the same cycle. That would explain a lot."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 220
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 220,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "The Moon... it’s just one of the nodes. The ships return there from missions in other dimensions. Each return could bring something unpredictable."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 221
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 221,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "That’s why the ships we’re traveling on now seem so strange. They’re returning with something we can’t control. What now?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "We need to learn more.",
+                    "nextoption": 222
+                },
+                {
+                    "text": "We need to get out of here.",
+                    "nextoption": 222
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 222,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ships we’re on now might be part of this cycle. If that’s true, it’s not just us at risk — it could affect the entire world."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 223
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 223,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "Is the Moon base where all the ships return? What kind of danger do they carry?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Can we stop this?",
+                    "nextoption": 224
+                },
+                {
+                    "text": "Are these ships beyond control?",
+                    "nextoption": 224
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 224,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I don’t know how to stop it. The ships are part of a cycle that operates beyond our will. But I know this — each return brings something that could alter your reality."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 225
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 225,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We need to act quickly. The systems on this ship are starting to break down. The alien says his powers could destroy us, but if we leave him..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 226
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 226,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I can’t control what’s happening. But if you leave me here, the cycle will continue. The ships will keep returning, and what they bring will be catastrophic."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s help him get out of here.",
+                    "nextoption": 228
+                },
+                {
+                    "text": "This is too risky.",
+                    "nextoption": 227
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 227,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "If we help him, he might be able to help us understand what’s happening with the Moon base and the ships. But we risk unpredictable consequences."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 229
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 228,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It’s a huge risk. His powers are unpredictable. If we free him, we might not be able to control what happens next."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 229
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 229,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "It’s your decision. If you leave me here, it might be too late. If you try to help me, together we can escape this ship and figure out what’s coming."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 230
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 230,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship’s systems are starting to fall apart. If we’re going to help the alien, we need to act now."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 231
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 231,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "If we take the risk and help him, we might uncover the truth about the ships. But if something goes wrong, we could lose everything."
+                }
+            ],
+            "options": [
+                {
+                    "text": "I’ll help you.",
+                    "nextoption": 234
+                },
+                {
+                    "text": "Don’t count on me.",
+                    "nextoption": 232
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 232,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship is collapsing..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Dalej",
+                    "nextoption": 233
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 233,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship explodes."
+                }
+            ],
+            "options": [
+                {
+                    "text": "BOOM!!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_ship_explosion",
+            "act": 3
+        },
+        {
+            "id": 234,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I don’t know if this will work, but we have to try. We need to get out of here before this ship breaks apart."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 235
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 235,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship’s systems are on the verge of failure. We need to move quickly before everything comes crashing down. Are you ready?"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s find a way out.",
+                    "nextoption": 236
+                },
+                {
+                    "text": "We need to be careful.",
+                    "nextoption": 236
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 236,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The paths on this ship are complex. We might find an alternate route through the technical section."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 237
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 237,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "This ship... it was a prison. There are places here, intertwined with other places in other times and realities. We must avoid the sealed zones..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s avoid those zones.",
+                    "nextoption": 238
+                },
+                {
+                    "text": "We’ll take a risk but move cautiously.",
+                    "nextoption": 238
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 238,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’ve located the technical section. It’s the shortest path, but its systems may be unstable. Passing through it will be risky."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 239
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 239,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I’m afraid my very presence might destabilize the systems. If something goes wrong... the entire ship could collapse on itself."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s keep going.",
+                    "nextoption": 240
+                },
+                {
+                    "text": "Maybe we can find another way?",
+                    "nextoption": 240
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 240,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The technical section is losing power. Some of the systems are offline, but I’m detecting movement... something’s here."
+                }
+            ],
+            "options": [
+                {
+                    "text": "We need to check it out. Ready?",
+                    "nextoption": 241
+                },
+                {
+                    "text": "We better hide.",
+                    "nextoption": 241
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 241,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It looks like the ship’s defense systems. They’re trying to prevent an escape."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 242
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 242,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "...I can try to disrupt them before we get closer."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 243
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 243,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "Disrupting the systems might destabilize the ship. It’s a risk, but it might give us a chance to pass."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Try to disrupt the systems.",
+                    "nextoption": 245
+                },
+                {
+                    "text": "No, let’s do it quietly.",
+                    "nextoption": 244
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 244,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "... too late... I’m starting the disruption."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 246
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 245,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "Alright, I’ll try to disrupt the system. It might let us through, but I don’t know what the consequences will be."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 246
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 246,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The systems are starting to destabilize. The ship is shaking. We need to hurry."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 247
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 247,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "We have to hurry. I’m losing control... this is too much."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Faster, we need to escape!",
+                    "nextoption": 248
+                },
+                {
+                    "text": "Don’t give up.",
+                    "nextoption": 248
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 248,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We have a few seconds before this sector collapses. We can get through, but we need to run."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 249
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 249,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "The path on the right leads straight to the exit. It’s our only chance..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s run there!",
+                    "nextoption": 250
+                },
+                {
+                    "text": "Harûn'kal, hold on!",
+                    "nextoption": 250
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 250,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The section ahead has collapsed, but I’m detecting another narrow tunnel on the left."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 251
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 251,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "This tunnel... might be our only way. But I don’t know how much longer I can control this.”"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Let’s try it, it’s our only option.",
+                    "nextoption": 252
+                },
+                {
+                    "text": "If it’s too dangerous...",
+                    "nextoption": 252
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 252,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The tunnel is narrow, but it looks stable. If this is our only chance, we have to take it."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 263
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 253,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It leads to the outer section of the ship. From there, we can get to the bridge and try to return to your ship."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 254
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 254,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "If we can reach the bridge, I might be able to open the exit."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Alright, let’s go to the bridge.",
+                    "nextoption": 255
+                },
+                {
+                    "text": "Let’s do it, but be careful.",
+                    "nextoption": 255
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 255,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m detecting movement near the bridge. The ship’s defense systems are still active. We’ll have to avoid them."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 256
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 256,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I can try to cause an explosion..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Blow it up!!",
+                    "nextoption": 260
+                },
+                {
+                    "text": "We’ll avoid them.",
+                    "nextoption": 257
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 257,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "It won’t be easy to avoid the ship’s defense systems..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 258
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 258,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship is focusing on us..."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 259
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 259,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The ship explodes."
+                }
+            ],
+            "options": [
+                {
+                    "text": "BOOM!!!",
+                    "nextoption": 3
+                }
+            ],
+            "action": "game_over_ship_explosion",
+            "act": 3
+        },
+        {
+            "id": 260,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The risk is high. The defense systems may react to our movement. We have to be quick."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 261
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 261,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "I’m blowing it up!"
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 262
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 262,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’ve made it to the bridge. We need to open the exit quickly before the ship falls apart."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 263
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 263,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "Opening the exit."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 264
+                }
+            ],
+            "action": "show_ad",
+            "act": 3
+        },
+        {
+            "id": 264,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "The path to your ship is clear. Harûn'kal is barely holding on, but we have a chance to make it back. We need to hurry."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 265
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 265,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "Return to the ship"
+                }
+            ],
+            "options": [
+                {
+                    "text": "It was a difficult road, but it's over now",
+                    "nextoption": 266
+                }
+            ],
+            "action": "info_screen_docking",
+            "act": 3
+        },
+        {
+            "id": 266,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "We’re back on your ship. All systems are stable. Ħarûn'kal looks exhausted but stable."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 267
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 267,
+            "person": "ECHO",
+            "variant": [
+                {
+                    "text": "We have two options: we can return to the corporation with Ħarûn'kal and receive a huge reward. Or... we can try to find a way to stop the cycle at the Moon base."
+                }
+            ],
+            "options": [
+                {
+                    "text": "What does the corporation offer?",
+                    "nextoption": 268
+                },
+                {
+                    "text": "Should we trust him?",
+                    "nextoption": 268
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 268,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "If you hand Harûn'kal over to the corporation, you’ll gain fame and fortune. The corporation has the technology to understand his... nature. But... there are risks."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 269
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 269,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "If you hand me over, they’ll try to control me. But what’s coming is bigger than they can comprehend. The cycle won’t stop, and what returns will destroy your world."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Why is the cycle so dangerous?",
+                    "nextoption": 270
+                },
+                {
+                    "text": "What will the corporation do to you?",
+                    "nextoption": 270
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 270,
+            "person": "Harûn'kal",
+            "variant": [
+                {
+                    "text": "The corporation doesn’t understand what these ships truly are. They’ll think it’s just technology to exploit. But each mission brings back something uncontrollable. They won’t understand until it’s too late."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 271
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 271,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The corporation will pay you millions for the discovery. They may try to control Harûn'kal, but this will set you for life. Remember, this might be your only chance."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Next",
+                    "nextoption": 272
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 272,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "I’m receiving a message from the corporation. They’re ready to invest millions in your return. They expect an answer."
+                }
+            ],
+            "options": [
+                {
+                    "text": "Hand the alien over to the corporation.",
+                    "nextoption": 273
+                },
+                {
+                    "text": "Join forces to stop the cycle.",
+                    "nextoption": 273
+                }
+            ],
+            "action": "none",
+            "act": 3
+        },
+        {
+            "id": 273,
+            "person": "Mission Control Center",
+            "variant": [
+                {
+                    "text": "The decision is made, the rest of the story coming soon..."
+                }
+            ],
+            "options": [],
+            "action": "show_end_screen",
+            "act": 3
+        }
+    ]
+}

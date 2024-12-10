@@ -617,7 +617,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernation, please wait"
                 }
             ],
             "options": [
@@ -1034,7 +1034,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernating again..."
                 }
             ],
             "options": [
@@ -3167,7 +3167,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernation in progress..."
                 }
             ],
             "options": [

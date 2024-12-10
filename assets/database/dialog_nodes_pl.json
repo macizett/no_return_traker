@@ -379,7 +379,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Oczekiwanie na rozpatrzenie"
+                    "text": "Dzwoni centrum kontroli lotu..."
                 }
             ],
             "options": [
@@ -626,7 +626,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Hibernacja, proszę czekać"
                 }
             ],
             "options": [
@@ -1043,7 +1043,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Ponowna hibernacja..."
                 }
             ],
             "options": [
@@ -3176,7 +3176,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Hibernacja trwa..."
                 }
             ],
             "options": [

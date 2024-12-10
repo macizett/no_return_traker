@@ -191,6 +191,7 @@ class _WaitingScreenState extends State<WaitingScreen> {
   Future<void> _clearTimer() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('${widget.timerKey}$_endTimeKey');
+    await prefs.remove(widget.timerKey);
   }
 
   Future<bool> _onWillPop() async {

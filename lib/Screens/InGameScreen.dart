@@ -47,8 +47,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
   int uniqueKey = 0;
   bool choiceChecking = false;
 
-  Map<String, int> _timerInstanceCounts = {};
-
   int currentNodeId = 3;
   List<Map<String, dynamic>> messages = [];
   final ScrollController _scrollController = ScrollController();
@@ -357,7 +355,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                       currentNodeId = node!.options[0].nextNode!;
                       _navigateToNode(currentNodeId, node!.options[0].text);
                       _scrollToBottom();
-                   
+
                   },
                   onTimerStatus: (isCompleted) {
                     print('Timer status update: $isCompleted');
@@ -376,10 +374,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
 
     void _showCallScreen(String option_text, String person,
         String person_avatar) {
-      currentNodeId = node!.options[0].nextNode!;
-      _navigateToNode(currentNodeId, node!.options[0].text);
-
-      Navigator.pushAndRemoveUntil(
+      Navigator.push(
         context,
         MaterialPageRoute(
             builder: (context) =>
@@ -388,8 +383,10 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                     option_text: option_text,
                     person: person,
                     person_avatar: person_avatar)),
-            (route) => false,
       );
+
+      currentNodeId = node!.options[0].nextNode!;
+      _navigateToNode(currentNodeId, node!.options[0].text);
     }
 
     void _showGameOverScreen(String topText, bool topTextStyle,
@@ -495,6 +492,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
 
       case 'show_waiting_screen_hibernation':
         if(handleActions == true) {
+          handleActions = false;
           _showWaitingScreen(
               10,
               "hibernation",
@@ -949,6 +947,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                                   .play(AssetSource('sound/click.mp3'));
                             }
                             resetTimer('hibernation');
+                            handleActions = true;
                             currentChoice = index;
                             _navigateToNode(
                               node!.options[index].nextNode!,

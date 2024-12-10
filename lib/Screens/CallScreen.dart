@@ -30,7 +30,7 @@ class CallScreenState extends State<CallScreen> {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'assets/drawables/0.png',
+              'assets/drawables/0_normal.png',
               key: ValueKey<int>(0),
               fit: BoxFit.cover,
               width: double.infinity,

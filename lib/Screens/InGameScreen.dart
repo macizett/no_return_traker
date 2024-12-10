@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,8 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
   bool _isNativeAdLoaded = false;
   InterstitialAd? _interstitialAd;
   bool _isInterstitialAdLoaded = false;
+  bool _isScrolling = false;
+  Timer? _scrollTimer;
 
   final Map<String, Map<int, int>> choiceToVariantMapping = {
     'venturi_or_selenari': {
@@ -44,10 +47,10 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
   int nodeIndex = 0;
   int currentChoice = 0;
   int choice = 0;
-  int uniqueKey = 0;
+  int uniqueID = 0;
   bool choiceChecking = false;
-
-  Map<String, int> _timerInstanceCounts = {};
+  int colorX = 0xFF28c96d;
+  String screenMode = '';
 
   int currentNodeId = 3;
   List<Map<String, dynamic>> messages = [];
@@ -103,7 +106,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
       request: const AdRequest(),
       nativeTemplateStyle: NativeTemplateStyle(
         templateType: TemplateType.small,
-        mainBackgroundColor: Colors.white, // Changed to black
+        mainBackgroundColor: Colors.white,
         cornerRadius: 0,
         callToActionTextStyle: NativeTemplateTextStyle(
           textColor: Colors.black,
@@ -133,12 +136,41 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
     )..load();
   }
 
-
   @override
   void dispose() {
+    _scrollTimer?.cancel();
     _nativeAd?.dispose();
     WidgetsBinding.instance.removeObserver(this);
+    _scrollController.dispose();
     super.dispose();
+  }
+
+  void _scrollToBottom() {
+    if (_isScrolling) return;
+    _isScrolling = true;
+
+    _scrollTimer?.cancel();
+
+    _scrollTimer = Timer.periodic(Duration(milliseconds: 50), (timer) {
+      if (_scrollController.hasClients) {
+        if (_scrollController.position.pixels != _scrollController.position.maxScrollExtent) {
+          _scrollController.animateTo(
+            _scrollController.position.maxScrollExtent,
+            duration: Duration(milliseconds: 200),
+            curve: Curves.easeOut,
+          );
+        } else {
+          timer.cancel();
+          _isScrolling = false;
+        }
+      }
+    });
+
+    // Safety timeout after 2 seconds
+    Future.delayed(Duration(seconds: 1), () {
+      _scrollTimer?.cancel();
+      _isScrolling = false;
+    });
   }
 
   Future<void> clearProgress() async {
@@ -157,6 +189,9 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
     });
 
     var userProgress = await getUserProgress();
+
+    uniqueID = userProgress.length + 1;
+
     if (userProgress.isNotEmpty) {
       messages.clear();
 
@@ -186,13 +221,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
           currentAct = lastNode.act!;
         });
 
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          final tabController = DefaultTabController.of(context);
-          if (tabController != null) {
-            tabController.animateTo(lastNode.act!);
-          }
-        });
-
         var selectedOption = lastNode.options.firstWhere(
               (option) => option.text == lastProgressNode.option,
           orElse: () => lastNode.options.first,
@@ -213,10 +241,14 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         _handleNodeAction(node!.action, node!.id);
       }
     });
+
+    // Add a delay before scrolling to ensure content is rendered
+    Future.delayed(Duration(milliseconds: 200), () {
+      _scrollToBottom();
+    });
   }
 
-  Future<void> _navigateToNode(int nextNodeId,
-      String selectedOptionText) async {
+  Future<void> _navigateToNode(int nextNodeId, String selectedOptionText) async {
     if (nextNodeId == 3) {
       await clearProgress();
     }
@@ -232,11 +264,12 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
     });
 
     await _loadNode();
-    _scrollToBottom();
   }
 
   Future<void> _loadNode({bool isInitialLoad = false}) async {
     var fetchedNode = await getNodeById(currentNodeId);
+
+    uniqueID++;
 
     if (choiceChecking == true) {
       choiceChecking = false;
@@ -253,12 +286,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
 
         if (previousNode != null && previousNode!.act != fetchedNode.act) {
           currentAct = fetchedNode.act!;
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            final tabController = DefaultTabController.of(context);
-            if (tabController != null) {
-              tabController.animateTo(fetchedNode.act! - 1);
-            }
-          });
         }
 
         if (messages.isEmpty || messages.last['isNode'] == false) {
@@ -275,11 +302,23 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
             lastSelectedOption != null &&
             currentNodeId != 3) {
           try {
-            putUserProgress(previousNode!.id, previousNode!.variant[nodeIndex],
-                lastSelectedOption!, previousNode!.person!, previousNode!.act!);
+            putUserProgress(
+              previousNode!.id,
+              uniqueID,
+              previousNode!.variant[nodeIndex],
+              lastSelectedOption!,
+              previousNode!.person!,
+              previousNode!.act!,
+            );
           } catch (e) {
-            putUserProgress(previousNode!.id, previousNode!.variant[0],
-                lastSelectedOption!, previousNode!.person!, previousNode!.act!);
+            putUserProgress(
+              previousNode!.id,
+              uniqueID,
+              previousNode!.variant[0],
+              lastSelectedOption!,
+              previousNode!.person!,
+              previousNode!.act!,
+            );
           }
         }
 
@@ -293,33 +332,20 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
     });
   }
 
-  void _scrollToBottom() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients) {
-        _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent,
-          duration: Duration(milliseconds: 300),
-          curve: Curves.easeOut,
-        );
-      }
-    });
-  }
-
   Future<void> _handleNodeAction(String? action, int nodeId) async {
-
-
-    void _showWaitingScreen(int duration,
+    void _showWaitingScreen(
+        int duration,
         String screenName,
         String topText,
         String bottomText,
         bool topTextStyle,
         bool bottomTextStyle,
         double bottomTextDistanceFromBottom,
-        double topTextDistanceFromTop) async {
-
-      if(handleActions == true){
+        double topTextDistanceFromTop,
+        ) async {
+      if (handleActions == true) {
         handleActions = false;
-        String timerKey = 'timer_key_$screenName';
+        String timerKey = 'timer_key_${screenName}_${uniqueID}';
         print('Starting _showWaitingScreen with key: $timerKey');
 
         bool isCompleted = await isTimerCompleted(timerKey);
@@ -335,34 +361,32 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         Navigator.push(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) =>
-                WaitingScreen(
-                  durationInSeconds: duration,
-                  child: InGameScreen(),
-                  homeScreen: StartScreen(),
-                  timerKey: timerKey,
-                  bottomText: bottomText,
-                  bottomTextStyle: bottomTextStyle,
-                  bottomTextDistanceFromBottom: bottomTextDistanceFromBottom,
-                  topTextDistanceFromTop: topTextDistanceFromTop,
-                  topText: topText,
-                  topTextStyle: topTextStyle,
-                  backgroundDrawableName: "waiting_screen_$screenName",
-                  onTimerComplete: () async {
-                    print('Timer complete callback fired');
-                    SharedPreferences prefs = await SharedPreferences.getInstance();
-                    await prefs.setBool(timerKey, true);
-                    
-                      Navigator.pop(context);
-                      currentNodeId = node!.options[0].nextNode!;
-                      _navigateToNode(currentNodeId, node!.options[0].text);
-                      _scrollToBottom();
-                   
-                  },
-                  onTimerStatus: (isCompleted) {
-                    print('Timer status update: $isCompleted');
-                  },
-                ),
+            pageBuilder: (context, animation, secondaryAnimation) => WaitingScreen(
+              durationInSeconds: duration,
+              child: InGameScreen(),
+              homeScreen: StartScreen(),
+              timerKey: timerKey,
+              action: screenName,
+              bottomText: bottomText,
+              bottomTextStyle: bottomTextStyle,
+              bottomTextDistanceFromBottom: bottomTextDistanceFromBottom,
+              topTextDistanceFromTop: topTextDistanceFromTop,
+              topText: topText,
+              topTextStyle: topTextStyle,
+              backgroundDrawableName: "waiting_screen_$screenName",
+              onTimerComplete: () async {
+                print('Timer complete callback fired');
+                SharedPreferences prefs = await SharedPreferences.getInstance();
+                await prefs.setBool(timerKey, true);
+
+                Navigator.pop(context);
+                currentNodeId = node!.options[0].nextNode!;
+                _navigateToNode(currentNodeId, node!.options[0].text);
+              },
+              onTimerStatus: (isCompleted) {
+                print('Timer status update: $isCompleted');
+              },
+            ),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,
@@ -374,36 +398,42 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
       }
     }
 
-    void _showCallScreen(String option_text, String person,
-        String person_avatar) {
+    void _showCallScreen(String option_text, String person, String person_avatar) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CallScreen(
+            child: InGameScreen(),
+            option_text: option_text,
+            person: person,
+            person_avatar: person_avatar,
+          ),
+        ),
+      );
+
       currentNodeId = node!.options[0].nextNode!;
       _navigateToNode(currentNodeId, node!.options[0].text);
-
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(
-            builder: (context) =>
-                CallScreen(
-                    child: InGameScreen(),
-                    option_text: option_text,
-                    person: person,
-                    person_avatar: person_avatar)),
-            (route) => false,
-      );
     }
 
-    void _showGameOverScreen(String topText, bool topTextStyle,
-        double topTextDistanceFromTop, String backgroundDrawableName) {
+    void _showGameOverScreen(
+        String topText,
+        bool topTextStyle,
+        int count,
+        double topTextDistanceFromTop,
+        String backgroundDrawableName,
+        ) {
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
-            builder: (context) =>
-                GameOverScreen(
-                    child: StartScreen(),
-                    topText: topText,
-                    topTextStyle: topTextStyle,
-                    topTextDistanceFromTop: topTextDistanceFromTop,
-                    backgroundDrawableName: backgroundDrawableName)),
+          builder: (context) => GameOverScreen(
+            child: StartScreen(),
+            topText: topText,
+            count: count,
+            topTextStyle: topTextStyle,
+            topTextDistanceFromTop: topTextDistanceFromTop,
+            backgroundDrawableName: backgroundDrawableName,
+          ),
+        ),
             (route) => false,
       );
     }
@@ -494,7 +524,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         break;
 
       case 'show_waiting_screen_hibernation':
-        if(handleActions == true) {
           _showWaitingScreen(
               10,
               "hibernation",
@@ -504,19 +533,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
               false,
               30,
               50);
-        }
-        break;
 
-      case 'show_waiting_screen_explosion':
-        _showWaitingScreen(
-            10,
-            "explosion",
-            node!.variant[0],
-            AppStrings.get('please_wait'),
-            true,
-            false,
-            30,
-            80);
         break;
 
       case 'show_waiting_screen_crossing':
@@ -568,18 +585,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
             80);
         break;
 
-      case 'show_waiting_screen_alien':
-        _showWaitingScreen(
-            10,
-            "alien",
-            node!.variant[0],
-            AppStrings.get('please_wait'),
-            true,
-            false,
-            30,
-            80);
-        break;
-
       case 'show_officer_call_screen':
         _showCallScreen(
             node!.options[0].text, node!.person!, "recruitment_officer");
@@ -594,53 +599,60 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         break;
 
       case 'info_screen_crystal_shaking':
-        _showInfoScreen(
-            node!.variant[0], true, 60, "info_screen_crystal_shaking");
+        _showInfoScreen(node!.variant[0], true, 60, "info_screen_crystal_shaking");
+        break;
+
+      case 'info_screen_alien':
+        _showInfoScreen(node!.variant[0], true, 60, "info_screen_alien");
+        break;
+
+      case 'info_screen_explosion':
+        _showInfoScreen(node!.variant[0], true, 60, "info_screen_explosion");
         break;
 
       case 'game_over_storm':
         _showGameOverScreen(
-            node!.variant[0].toUpperCase(), true, 80, "game_over_coldness");
+            node!.variant[0].toUpperCase(), true, 1,80, "game_over_coldness");
         break;
 
       case 'game_over_coldness':
         _showGameOverScreen(
-            node!.variant[0].toUpperCase(), true, 80, "game_over_coldness");
+            node!.variant[0].toUpperCase(), true, 2, 80, "game_over_coldness");
         break;
 
       case 'game_over_crystal_explosion':
-        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 80,
+        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 1, 80,
             "game_over_crystal_explosion");
         break;
 
       case 'game_over_gas_intoxication':
-        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 80,
+        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 2, 80,
             "game_over_gas_intoxication");
         break;
 
       case 'game_over_storm':
-        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 80,
+        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 1, 80,
             "waiting_screen_explosion");
         break;
 
       case 'game_over_ship_explosion':
-        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 40,
+        _showGameOverScreen(node!.variant[0].toUpperCase(), true, 3, 40,
             "game_over_ship_explosion");
         break;
 
       case 'game_over_black_hole':
         _showGameOverScreen(
-            node!.variant[0].toUpperCase(), true, 80, "game_over_black_hole");
+            node!.variant[0].toUpperCase(), true, 1, 80, "game_over_black_hole");
         break;
 
       case 'game_over_cliff_fall':
         _showGameOverScreen(
-            node!.variant[0].toUpperCase(), true, 40, "game_over_cliff_fall");
+            node!.variant[0].toUpperCase(), true, 1, 40, "game_over_cliff_fall");
         break;
 
       case 'game_over_void_fall':
         _showGameOverScreen(
-            node!.variant[0].toUpperCase(), true, 40, "game_over_cliff_fall");
+            node!.variant[0].toUpperCase(), true, 1, 40, "game_over_cliff_fall");
         break;
 
       case 'check_starting_criteria':
@@ -648,7 +660,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         int? startingCriteria = await prefs.getInt('starting_criteria');
         if (startingCriteria != 0) {
           _showGameOverScreen(
-              AppStrings.get('ship_exploded'), true, 40,
+              AppStrings.get('ship_exploded'), true, 3, 40,
               "game_over_ship_explosion");
         }
         else {
@@ -666,7 +678,6 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
 
       case 'save_starting_criteria':
         SharedPreferences prefs = await SharedPreferences.getInstance();
-
         // First check if it was ever 1
         bool wasEverOne = prefs.getBool('starting_criteria_was_one') ?? false;
 
@@ -711,6 +722,16 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         choice = choiceToVariantMapping['drone_or_gear']?[savedChoice] ?? 0;
         break;
 
+      case 'show_darkness_screen':
+        colorX = 0xFF000000;
+        screenMode = '_dark';
+        break;
+
+      case 'show_normal_screen':
+        colorX = 0xFF28c96d;
+        screenMode = '';
+        break;
+
       default:
         print('action undefined');
     }
@@ -728,7 +749,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'assets/drawables/0.png',
+              'assets/drawables/0${screenMode}.png',
               key: ValueKey<int>(0),
               fit: BoxFit.cover,
               width: double.infinity,
@@ -743,6 +764,30 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                   ),
                   child: Row(
                     children: [
+
+                      Padding(
+                        padding: EdgeInsets.only(left: 30.0),
+                        child: Text(
+                              () {
+                            switch (node?.act ?? 0) {
+                              case 1:
+                                return AppStrings.get('act1');
+                              case 2:
+                                return AppStrings.get('act2');
+                              case 3:
+                                return AppStrings.get('act3');
+                              default:
+                                return '';
+                            }
+                          }(),
+                          style: TextStyle(
+                            color: Color(0xFF28c96d),
+                            fontSize: 16,
+                            fontFamily: 'VT323',
+                          ),
+                        ),
+                      ),
+
                       Spacer(),
                       Container(
                         height: 40.0,
@@ -784,7 +829,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                     decoration: BoxDecoration(
                       color: Colors.black,
                       border: Border.all(
-                        color: Color(0xFF28c96d),
+                        color: Color(colorX),
                         width: 7.0,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -881,7 +926,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                               Expanded(
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF28c96d),
+                                    color: Color(colorX),
                                     borderRadius:
                                     BorderRadius.circular(8.0),
                                   ),
@@ -910,7 +955,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                   decoration: BoxDecoration(
                     color: Colors.black,
                     border: Border.all(
-                      color: Color(0xFF28c96d),
+                      color: Color(colorX),
                       width: 7,
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -948,8 +993,9 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                               await AudioPlayer()
                                   .play(AssetSource('sound/click.mp3'));
                             }
-                            resetTimer('hibernation');
+                            handleActions = true;
                             currentChoice = index;
+                            colorX = 0xFF28c96d;
                             _navigateToNode(
                               node!.options[index].nextNode!,
                               node!.options[index].text,
@@ -962,7 +1008,7 @@ class InGameScreenState extends State<InGameScreen> with WidgetsBindingObserver 
                               border: Border(
                                 top: index != 0
                                     ? BorderSide(
-                                    color: Color(0xFF28c96d),
+                                    color: Color(colorX),
                                     width: 7)
                                     : BorderSide.none,
                               ),

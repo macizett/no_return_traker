@@ -356,12 +356,12 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Please wait"
+                    "text": "TRANSFERRING YOU TO THE ALIEN BASE"
                 }
             ],
             "options": [
                 {
-                    "text": "I'm waiting.",
+                    "text": "PLEASE WAIT",
                     "nextoption": 19
                 }
             ],
@@ -617,7 +617,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernation, please wait"
                 }
             ],
             "options": [
@@ -870,7 +870,7 @@
                     "nextoption": 44
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -891,7 +891,7 @@
                     "nextoption": 45
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -912,7 +912,7 @@
                     "nextoption": 46
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -933,7 +933,7 @@
                     "nextoption": 47
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -954,7 +954,7 @@
                     "nextoption": 49
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -1009,7 +1009,7 @@
                     "nextoption": 51
                 }
             ],
-            "action": "none",
+            "action": "show_normal_screen",
             "act": 2
         },
         {
@@ -1034,7 +1034,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernating again..."
                 }
             ],
             "options": [
@@ -3167,7 +3167,7 @@
             "person": "Mission Control Center",
             "variant": [
                 {
-                    "text": "Hibernation"
+                    "text": "Hibernation in progress..."
                 }
             ],
             "options": [
@@ -3658,7 +3658,7 @@
             ],
             "options": [
                 {
-                    "text": "Jus...",
+                    "text": "Just a moment...",
                     "nextoption": 3
                 }
             ],
@@ -4064,7 +4064,7 @@
                     "nextoption": 209
                 }
             ],
-            "action": "show_waiting_screen_alien",
+            "action": "info_screen_alien",
             "act": 3
         },
         {
@@ -5033,7 +5033,7 @@
                     "nextoption": 262
                 }
             ],
-            "action": "none",
+            "action": "info_screen_explosion",
             "act": 3
         },
         {

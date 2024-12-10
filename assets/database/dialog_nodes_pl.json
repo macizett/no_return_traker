@@ -379,7 +379,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Oczekiwanie na rozpatrzenie"
+                    "text": "Dzwoni centrum kontroli lotu..."
                 }
             ],
             "options": [
@@ -626,7 +626,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Hibernacja, proszę czekać"
                 }
             ],
             "options": [
@@ -879,7 +879,7 @@
                     "nextoption": 44
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -900,7 +900,7 @@
                     "nextoption": 45
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -921,7 +921,7 @@
                     "nextoption": 46
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -942,7 +942,7 @@
                     "nextoption": 47
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -963,7 +963,7 @@
                     "nextoption": 49
                 }
             ],
-            "action": "none",
+            "action": "show_darkness_screen",
             "act": 2
         },
         {
@@ -1018,7 +1018,7 @@
                     "nextoption": 51
                 }
             ],
-            "action": "none",
+            "action": "show_normal_screen",
             "act": 2
         },
         {
@@ -1043,7 +1043,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Ponowna hibernacja..."
                 }
             ],
             "options": [
@@ -3176,7 +3176,7 @@
             "person": "Centrum kontroli lotu",
             "variant": [
                 {
-                    "text": "Hibernacja"
+                    "text": "Hibernacja trwa..."
                 }
             ],
             "options": [
@@ -4073,7 +4073,7 @@
                     "nextoption": 209
                 }
             ],
-            "action": "show_waiting_screen_alien",
+            "action": "info_screen_alien",
             "act": 3
         },
         {
@@ -5042,7 +5042,7 @@
                     "nextoption": 262
                 }
             ],
-            "action": "none",
+            "action": "info_screen_explosion",
             "act": 3
         },
         {

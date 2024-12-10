@@ -10,6 +10,7 @@ class WaitingScreen extends StatefulWidget {
   final int durationInSeconds;
   final Widget child;
   final String? message;
+  final String? action;
   final Widget homeScreen;
   final String timerKey;
   final VoidCallback? onTimerComplete;
@@ -27,6 +28,7 @@ class WaitingScreen extends StatefulWidget {
     Key? key,
     required this.durationInSeconds,
     required this.child,
+    required this.action,
     required this.homeScreen,
     required this.timerKey,
     required this.topText,
@@ -130,9 +132,11 @@ class _WaitingScreenState extends State<WaitingScreen> {
     final prefsInstance = await prefs;
     final notificationsEnabledPref = prefsInstance.getBool("notificationsEnabled") ?? true;
     if (notificationsEnabledPref == true) {
+
       await flutterLocalNotificationsPlugin.show(
         0,
         '',
+        AppStrings.get(widget.action!)+
         AppStrings.get('notification_content'),
         platformChannelSpecifics,
       );
@@ -191,6 +195,7 @@ class _WaitingScreenState extends State<WaitingScreen> {
   Future<void> _clearTimer() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('${widget.timerKey}$_endTimeKey');
+    await prefs.remove(widget.timerKey);
   }
 
   Future<bool> _onWillPop() async {

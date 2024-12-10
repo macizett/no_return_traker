@@ -8,16 +8,19 @@ class UserProgressNode {
   int id;
 
   @HiveField(1)
-  String text;
+  int uniqueID;
 
   @HiveField(2)
-  String option;
+  String text;
 
   @HiveField(3)
-  String person;
+  String option;
 
   @HiveField(4)
+  String person;
+
+  @HiveField(5)
   int act;
 
-  UserProgressNode({required this.id, required this.text, required this.option, required this.person, required this.act});
+  UserProgressNode({required this.id, required this.uniqueID, required this.text, required this.option, required this.person, required this.act});
 }

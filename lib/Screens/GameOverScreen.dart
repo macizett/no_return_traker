@@ -1,5 +1,6 @@
 import 'package:blinking_text/blinking_text.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Data/AppStrings.dart';
 import '../Data/ViewModel.dart';
@@ -9,6 +10,7 @@ class GameOverScreen extends StatelessWidget {
   final Widget child;
   final String backgroundDrawableName;
   final String topText;
+  final int count;
   final double topTextDistanceFromTop;
   final bool topTextStyle;           //false - black and big, true - green and small
 
@@ -16,13 +18,14 @@ class GameOverScreen extends StatelessWidget {
     Key? key,
     required this.child,
     required this.topText,
+    required this.count,
     required this.topTextStyle,
     required this.topTextDistanceFromTop,
     required this.backgroundDrawableName,
   }) : super(key: key);
 
   void ClearProgress() {
-    clearUserProgress();
+    deleteLastXOfUserProgress(count);
   }
 
   TextStyle _getTextStyle(bool style) {
@@ -39,7 +42,9 @@ class GameOverScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         body: SafeArea(
           child: GestureDetector(
-            onTap: () {
+            onTap: () async {
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.setBool('starting_criteria_was_one', false);
               ClearProgress();  // Call ClearProgress before navigation
               Navigator.pushReplacement(
                 context,

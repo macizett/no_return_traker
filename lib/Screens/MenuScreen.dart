@@ -144,7 +144,7 @@ class _MenuScreenState extends State<MenuScreen> {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'assets/drawables/0.png',
+              'assets/drawables/0_normal.png',
               key: ValueKey<int>(0),
               fit: BoxFit.cover,
               width: double.infinity,
@@ -165,136 +165,157 @@ class _MenuScreenState extends State<MenuScreen> {
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(16.0)),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
+                    child: Stack(
+                      children: [
+                        // Back Button
+                        Positioned(
+                          left: 16,
+                          top: 16,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Icon(
+                              Icons.arrow_back,
+                              color: Color(0xff4ec557),
+                              size: 32,
+                            ),
+                          ),
+                        ),
+                        // Main Content
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                AppStrings.get('menu'),
-                                style: TextStyle(
-                                  fontFamily: 'VT323',
-                                  fontSize: 40.0,
-                                  color: Color(0xff4ec557),
-                                ),
-                              ),
-                              SizedBox(height: 20),
-                              GestureDetector(
-                                onTap: () async {
-                                  setState(() {
-                                    musicEnabled = !musicEnabled;
-                                    saveSettings('musicEnabled', musicEnabled);
-                                  });
+                              Column(
+                                children: [
+                                  Text(
+                                    AppStrings.get('menu'),
+                                    style: TextStyle(
+                                      fontFamily: 'VT323',
+                                      fontSize: 40.0,
+                                      color: Color(0xff4ec557),
+                                    ),
+                                  ),
+                                  SizedBox(height: 20),
+                                  GestureDetector(
+                                    onTap: () async {
+                                      setState(() {
+                                        musicEnabled = !musicEnabled;
+                                        saveSettings('musicEnabled', musicEnabled);
+                                      });
 
-                                  if (musicEnabled == true) {
-                                    await backgroundSound.play();
-                                  } else {
-                                    await backgroundSound.pause();
-                                  }
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      AppStrings.get('music'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
+                                      if (musicEnabled == true) {
+                                        await backgroundSound.play();
+                                      } else {
+                                        await backgroundSound.pause();
+                                      }
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          AppStrings.get('music'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                        Text(
+                                          musicEnabled ? AppStrings.get('on') : AppStrings.get('off'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    Text(
-                                      musicEnabled ? AppStrings.get('on') : AppStrings.get('off'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        sfxEnabled = !sfxEnabled;
+                                        saveSettings('sfxEnabled', sfxEnabled);
+                                      });
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          AppStrings.get('sfx'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                        Text(
+                                          sfxEnabled ? AppStrings.get('on') : AppStrings.get('off'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        notificationsEnabled = !notificationsEnabled;
+                                        saveSettings('notificationsEnabled', notificationsEnabled);
+                                      });
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          AppStrings.get('notifications'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                        Text(
+                                          notificationsEnabled ? AppStrings.get('on') : AppStrings.get('off'),
+                                          style: TextStyle(
+                                            fontFamily: 'VT323',
+                                            fontSize: 24.0,
+                                            color: Color(0xff4ec557),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                              SizedBox(height: 10),
-                              GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    sfxEnabled = !sfxEnabled;
-                                    saveSettings('sfxEnabled', sfxEnabled);
-                                  });
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      AppStrings.get('sfx'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
-                                    ),
-                                    Text(
-                                      sfxEnabled ? AppStrings.get('on') : AppStrings.get('off'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
-                                    ),
-                                  ],
+                              ElevatedButton(
+                                onPressed: _showResetConfirmationDialog,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Color(0xff4ec557),
+                                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                                  minimumSize: Size.fromHeight(50),
                                 ),
-                              ),
-                              SizedBox(height: 10),
-                              GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    notificationsEnabled = !notificationsEnabled;
-                                    saveSettings('notificationsEnabled', notificationsEnabled);
-                                  });
-                                },
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      AppStrings.get('notifications'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
-                                    ),
-                                    Text(
-                                      notificationsEnabled ? AppStrings.get('on') : AppStrings.get('off'),
-                                      style: TextStyle(
-                                        fontFamily: 'VT323',
-                                        fontSize: 24.0,
-                                        color: Color(0xff4ec557),
-                                      ),
-                                    ),
-                                  ],                                ),
+                                child: Text(
+                                  AppStrings.get('reset'),
+                                  style: TextStyle(
+                                    fontFamily: 'VT323',
+                                    fontSize: 24.0,
+                                    color: Colors.black,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
-                          ElevatedButton(
-                            onPressed: _showResetConfirmationDialog,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xff4ec557),
-                              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-                              minimumSize: Size.fromHeight(50),
-                            ),
-                            child: Text(
-                              AppStrings.get('reset'),
-                              style: TextStyle(
-                                fontFamily: 'VT323',
-                                fontSize: 24.0,
-                                color: Colors.black,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

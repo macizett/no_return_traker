@@ -27,18 +27,20 @@ class InfoScreen extends StatelessWidget {
     }
   }
 
+  void _handleNavigation(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => child),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
           child: GestureDetector(
-            onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => child),
-              );
-            },
+            onTap: () => _handleNavigation(context),
             behavior: HitTestBehavior.opaque,
             child: Stack(
               children: <Widget>[
@@ -71,6 +73,8 @@ class InfoScreen extends StatelessWidget {
                   left: 20,
                   right: 20,
                   child: Center(
+                    child: GestureDetector(
+                      onTap: () => _handleNavigation(context),
                       child: BlinkText(
                         AppStrings.get('click_to_continue'),
                         textAlign: TextAlign.center,
@@ -81,7 +85,8 @@ class InfoScreen extends StatelessWidget {
                         ),
                         duration: Duration(seconds: 2),
                         endColor: Color(0xFF34f285),
-                      )
+                      ),
+                    ),
                   ),
                 ),
               ],

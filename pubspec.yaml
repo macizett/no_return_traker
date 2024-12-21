@@ -58,6 +58,7 @@ flutter:
   - assets/drawables/waiting_screen_hibernation.png
   - assets/drawables/waiting_screen_recruitment.png
   - assets/drawables/waiting_screen_starting.png
+  - assets/drawables/waiting_screen_returning_to_ship.png
 
   - assets/drawables/game_over_black_hole.png
   - assets/drawables/game_over_cliff_fall.png

@@ -51,10 +51,12 @@ flutter:
   - assets/drawables/survivor_avatar.png
 
   - assets/drawables/info_screen_alien.png
+  - assets/drawables/info_screen_explosion.png
+  - assets/drawables/info_screen_crystal_shaking.png
+
   - assets/drawables/waiting_screen_analysis.png
   - assets/drawables/waiting_screen_climbing.png
   - assets/drawables/waiting_screen_crossing.png
-  - assets/drawables/info_screen_explosion.png
   - assets/drawables/waiting_screen_hibernation.png
   - assets/drawables/waiting_screen_recruitment.png
   - assets/drawables/waiting_screen_starting.png
@@ -66,7 +68,6 @@ flutter:
   - assets/drawables/game_over_crystal_explosion.png
   - assets/drawables/game_over_gas_intoxication.png
   - assets/drawables/game_over_ship_explosion.png
-  - assets/drawables/info_screen_crystal_shaking.png
 
   - assets/database/dialog_nodes_pl.json
   - assets/database/dialog_nodes_en.json

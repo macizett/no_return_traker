@@ -144,7 +144,7 @@ class _MenuScreenState extends State<MenuScreen> {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'assets/drawables/0_normal.png',
+              'assets/drawables/0.png',
               key: ValueKey<int>(0),
               fit: BoxFit.cover,
               width: double.infinity,

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blinking_text/blinking_text.dart';
 
-import '../Data/Global.dart';
-
 class CallScreen extends StatefulWidget {
   final String person_avatar;
   final String option_text;
@@ -30,7 +28,7 @@ class CallScreenState extends State<CallScreen> {
         child: Stack(
           children: <Widget>[
             Image.asset(
-              'assets/drawables/0_normal.png',
+              'assets/drawables/0.png',
               key: ValueKey<int>(0),
               fit: BoxFit.cover,
               width: double.infinity,
